@@ -1,0 +1,625 @@
+<Type Name="EncryptionProvider" FullName="Microsoft.Office.Core.EncryptionProvider">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="d47f94e5632932307e068c56805ab362f5180bfc" />
+    <Meta Name="ms.sourcegitcommit" Value="f41bc3cdd2c00b9a51a4340ac823a9e309633924" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="es-ES" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20663229" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface EncryptionProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract EncryptionProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Core.EncryptionProvider" />
+  <TypeSignature Language="VB.NET" Value="Public Interface EncryptionProvider" />
+  <TypeSignature Language="C++ CLI" Value="public interface class EncryptionProvider" />
+  <AssemblyInfo>
+    <AssemblyName>office</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("000CD809-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4160)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="a1c69-101">Proporciona los métodos para establecer permisos, aplicar el tipo de cifrado y descifrado subyacentes, y realizar la autenticación de usuarios.</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="a1c69-101">Provides the methods for setting up permissions, applying the cryptography of the underlying encryption and decryption, and user authentication.</span>
+      </span>
+    </summary>
+    <remarks>
+      <span data-ttu-id="a1c69-102">
+        <para>Los proveedores de cifrado se implementan mediante complementos COM personalizados. Se proporcionan con el almacenamiento de documentos de Office para agregar en información específica almacenar la información que necesita cifrar, descifrar, aplicar derechos y mostrar interfaces de usuario del programa de instalación o la autenticación de permiso.</para>
+        <para />
+      </span>
+      <span class="sxs-lookup">
+        <span data-stu-id="a1c69-102">
+          <para>Encryption providers are implemented through custom COM add-ins. You are provided with storage within Office documents for add-in specific information to store whatever information you need to encrypt, decrypt, apply rights, and display permission setup or authentication user interfaces. </para>
+          <para />
+        </span>
+      </span>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Authenticate">
+      <MemberSignature Language="C#" Value="public int Authenticate (object ParentWindow, object EncryptionData, out uint PermissionsMask);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Authenticate([in]object ParentWindow, [in]object EncryptionData, [out] unsigned int32&amp; PermissionsMask) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.EncryptionProvider.Authenticate(System.Object,System.Object,System.UInt32@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Authenticate (ParentWindow As Object, EncryptionData As Object, ByRef PermissionsMask As UInteger) As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; int Authenticate(System::Object ^ ParentWindow, System::Object ^ EncryptionData, [Runtime::InteropServices::Out] System::UInt32 % PermissionsMask);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743810)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ParentWindow" Type="System.Object" />
+        <Parameter Name="EncryptionData" Type="System.Object" />
+        <Parameter Name="PermissionsMask" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ParentWindow">
+          <span data-ttu-id="a1c69-103">Especifica la ventana a la que se llama para mostrar la configuración de cifrado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-103">Specifies the window that is called to display the encryption settings.</span>
+          </span>
+        </param>
+        <param name="EncryptionData">
+          <span data-ttu-id="a1c69-104">Contiene los datos cifrados del documento actual.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-104">Contains the encrypted data for the current document.</span>
+          </span>
+        </param>
+        <param name="PermissionsMask">
+          <span data-ttu-id="a1c69-105">Interfaz de usuario mostrada por el complemento del proveedor de cifrado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-105">The user interface displayed by the encryption provider add-in.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="a1c69-106">Se utiliza para determinar si el usuario dispone de los permisos apropiados para abrir el documento cifrado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-106">Used to determine whether the user has the proper permissions to open the encrypted document.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="a1c69-107">
+            <b>Integer</b>
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-107">
+              <b>Integer</b>
+            </span>
+          </span>
+        </returns>
+        <remarks>
+          <span data-ttu-id="a1c69-108">
+            <para>Esto es donde el proveedor de cifrado del complemento COM muestra la interfaz de usuario es aplicable para aplicar el cifrado. Por ejemplo, un proveedor de cifrado de contraseña pedirá la contraseña del usuario.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-108">
+              <para>This is where your COM add-in encryption  provider displays whatever user interface is  applicable for applying encryption. For example, a password encryption provider  would prompt for the user's password. </para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneSession">
+      <MemberSignature Language="C#" Value="public int CloneSession (int SessionHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CloneSession([in]int32 SessionHandle) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.EncryptionProvider.CloneSession(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CloneSession (SessionHandle As Integer) As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; int CloneSession(int SessionHandle);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743811)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="SessionHandle" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="SessionHandle">
+          <span data-ttu-id="a1c69-109">Id. de la sesión clonada.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-109">The ID of the cloned session.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="a1c69-110">Crea una segunda copia de trabajo de la <see cref="T:Microsoft.Office.Core.EncryptionProvider" /> sesión de cifrado del objeto para un archivo que se va a guardar.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-110">Creates a second, working copy of the <see cref="T:Microsoft.Office.Core.EncryptionProvider" /> object’s encryption session for a file that is about to be saved.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="a1c69-111">
+            <b>Integer</b>
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-111">
+              <b>Integer</b>
+            </span>
+          </span>
+        </returns>
+        <remarks>
+          <span data-ttu-id="a1c69-112">
+            <para>El resultado de este método es otro controlador de sesión con la misma configuración de cifrado. Cuando se produce una operación de guardado automático, se proporcionan con este identificador de sesión.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-112">
+              <para>The output of this method is another session handle with the same encryption settings. When an autoSave operation occurs, you are provided with this session handle.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptStream">
+      <MemberSignature Language="C#" Value="public void DecryptStream (int SessionHandle, string StreamName, object EncryptedStream, object UnencryptedStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DecryptStream([in]int32 SessionHandle, [in]string StreamName, [in]object EncryptedStream, [in]object UnencryptedStream) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.EncryptionProvider.DecryptStream(System.Int32,System.String,System.Object,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DecryptStream (SessionHandle As Integer, StreamName As String, EncryptedStream As Object, UnencryptedStream As Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void DecryptStream(int SessionHandle, System::String ^ StreamName, System::Object ^ EncryptedStream, System::Object ^ UnencryptedStream);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743815)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="SessionHandle" Type="System.Int32" />
+        <Parameter Name="StreamName" Type="System.String" />
+        <Parameter Name="EncryptedStream" Type="System.Object" />
+        <Parameter Name="UnencryptedStream" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="SessionHandle">
+          <span data-ttu-id="a1c69-113">Id. de la sesión actual.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-113">The ID of the current session.</span>
+          </span>
+        </param>
+        <param name="StreamName">
+          <span data-ttu-id="a1c69-114">Identificador de la secuencia de datos.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-114">The ID of the stream of data.</span>
+          </span>
+        </param>
+        <param name="EncryptedStream">
+          <span data-ttu-id="a1c69-115">Secuencia de datos cifrados.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-115">The encrypted data stream.</span>
+          </span>
+        </param>
+        <param name="UnencryptedStream">
+          <span data-ttu-id="a1c69-116">La secuencia de datos antes del descifrado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-116">The data stream before decryption.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="a1c69-117">Descifra y devuelve una secuencia de datos cifrados de un documento.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-117">Decrypts and returns a stream of encrypted data for a document.</span>
+          </span>
+        </summary>
+        <remarks>
+          <span data-ttu-id="a1c69-118">
+            <para>Se llama a este método por el complemento COM cuando se abre el documento y después de que el complemento ha verificado que se autentica al usuario abrir el documento. Este método es la función inversa de <see cref="M:Microsoft.Office.Core.EncryptionProvider.EncryptStream(System.Int32,System.String,System.Object,System.Object)" /> hacer una copia de los datos cifrados (método) y se convierte en datos (no cifrados) puros.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-118">
+              <para>This method is called by your COM add-in when the document is  opened, and after your add-in has verified that the user opening the document is authenticated. This method is the inverse of <see cref="M:Microsoft.Office.Core.EncryptionProvider.EncryptStream(System.Int32,System.String,System.Object,System.Object)" /> method and converts encrypted data back into pure (un-encrypted) data.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptStream">
+      <MemberSignature Language="C#" Value="public void EncryptStream (int SessionHandle, string StreamName, object UnencryptedStream, object EncryptedStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EncryptStream([in]int32 SessionHandle, [in]string StreamName, [in]object UnencryptedStream, [in]object EncryptedStream) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.EncryptionProvider.EncryptStream(System.Int32,System.String,System.Object,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EncryptStream (SessionHandle As Integer, StreamName As String, UnencryptedStream As Object, EncryptedStream As Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EncryptStream(int SessionHandle, System::String ^ StreamName, System::Object ^ UnencryptedStream, System::Object ^ EncryptedStream);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743814)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="SessionHandle" Type="System.Int32" />
+        <Parameter Name="StreamName" Type="System.String" />
+        <Parameter Name="UnencryptedStream" Type="System.Object" />
+        <Parameter Name="EncryptedStream" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="SessionHandle">
+          <span data-ttu-id="a1c69-119">Id. de la sesión actual.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-119">The ID of the current session.</span>
+          </span>
+        </param>
+        <param name="StreamName">
+          <span data-ttu-id="a1c69-120">Nombre de la cadena cifrada de datos del documento.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-120">The name of the encrypted stream of document data.</span>
+          </span>
+        </param>
+        <param name="UnencryptedStream">
+          <span data-ttu-id="a1c69-121">Cadena de datos antes del cifrado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-121">The data stream before encryption.</span>
+          </span>
+        </param>
+        <param name="EncryptedStream">
+          <span data-ttu-id="a1c69-122">Información de la cadena de datos después de cifrarla.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-122">The data stream information after it has been encrypted.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="a1c69-123">Cifra y devuelve una cadena de datos para un documento.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-123">Encrypts and returns a stream of data for a document.</span>
+          </span>
+        </summary>
+        <remarks>
+          <span data-ttu-id="a1c69-124">
+            <para>Este método se denomina normalmente por el complemento COM durante una operación de guardar operación.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-124">
+              <para>This method is typically called by your COM add-in during a save operation.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSession">
+      <MemberSignature Language="C#" Value="public void EndSession (int SessionHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndSession([in]int32 SessionHandle) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.EncryptionProvider.EndSession(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndSession (SessionHandle As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSession(int SessionHandle);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743812)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="SessionHandle" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="SessionHandle">
+          <span data-ttu-id="a1c69-125">Id. de la sesión actual.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-125">The ID of the current session.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="a1c69-126">Finaliza la sesión de cifrado actual.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-126">Ends the current encryption session.</span>
+          </span>
+        </summary>
+        <remarks>
+          <span data-ttu-id="a1c69-127">
+            <para>Durante una operación de guardar la operación, el <see cref="M:Microsoft.Office.Core.EncryptionProvider.CloneSession(System.Int32)" /> llama al método su complemento COM para crear una segunda copia de trabajo de la <see cref="T:Microsoft.Office.Core.EncryptionProvider" /> sesión de cifrado del objeto para el archivo que se va a guardar. Siguiente el <see cref="M:Microsoft.Office.Core.EncryptionProvider.Save(System.Int32,System.Object)" /> método se llama para obtener la información personalizada que le gustaría conservar acerca de la configuración de cifrado. Esta información está disponible cuando se vuelve a abrir este documento más adelante. Entonces el <see cref="M:Microsoft.Office.Core.EncryptionProvider.EncryptStream(System.Int32,System.String,System.Object,System.Object)" /> método se llama, que proporciona el proveedor de todo el contenido del documento. Y, por último, para completar el proceso, el <see cref="M:Microsoft.Office.Core.EncryptionProvider.EndSession(System.Int32)" /> (método) para el identificador de la sesión clonada.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-127">
+              <para>During a save operation, the <see cref="M:Microsoft.Office.Core.EncryptionProvider.CloneSession(System.Int32)" /> method is called by your COM add-in to create a second, working copy of the <see cref="T:Microsoft.Office.Core.EncryptionProvider" /> object’s encryption session for the file that is about to be saved. Next the <see cref="M:Microsoft.Office.Core.EncryptionProvider.Save(System.Int32,System.Object)" /> method is called to get whatever custom information you would like to persist about your encryption settings. This information is available when this document is reopened later. Then the <see cref="M:Microsoft.Office.Core.EncryptionProvider.EncryptStream(System.Int32,System.String,System.Object,System.Object)" /> method is called which gives the provider the entire contents of the document. And finally, to complete the process, the <see cref="M:Microsoft.Office.Core.EncryptionProvider.EndSession(System.Int32)" /> method for the cloned session handle.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderDetail">
+      <MemberSignature Language="C#" Value="public object GetProviderDetail (Microsoft.Office.Core.EncryptionProviderDetail encprovdet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetProviderDetail([in]valuetype Microsoft.Office.Core.EncryptionProviderDetail encprovdet) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.EncryptionProvider.GetProviderDetail(Microsoft.Office.Core.EncryptionProviderDetail)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetProviderDetail (encprovdet As EncryptionProviderDetail) As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ GetProviderDetail(Microsoft::Office::Core::EncryptionProviderDetail encprovdet);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encprovdet" Type="Microsoft.Office.Core.EncryptionProviderDetail" />
+      </Parameters>
+      <Docs>
+        <param name="encprovdet">
+          <span data-ttu-id="a1c69-128">Especifica la información de cifrado que se desee.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-128">Specifies the encryption information that you want.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="a1c69-129">Muestra información sobre el cifrado del documento actual.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-129">Displays information about the encryption of the current document.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="a1c69-130">object</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-130">object</span>
+          </span>
+        </returns>
+        <remarks>
+          <span data-ttu-id="a1c69-131">
+            <para>Este método permite consultar el <see cref="T:Microsoft.Office.Core.EncryptionProvider" /> de objetos para obtener información, como la dirección URL de descarga para los usuarios no tienen el agregar COM personalizado instalado, el algoritmo que se va a implementar y el modo de cifrado que está utilizando.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-131">
+              <para>This method allows you to query the <see cref="T:Microsoft.Office.Core.EncryptionProvider" /> object  for information such as what is the download URL for users without your custom COM  add-in installed, what algorithm are you implementing, and what cipher mode you are using.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSession">
+      <MemberSignature Language="C#" Value="public int NewSession (object ParentWindow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 NewSession([in]object ParentWindow) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.EncryptionProvider.NewSession(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function NewSession (ParentWindow As Object) As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; int NewSession(System::Object ^ ParentWindow);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ParentWindow" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="ParentWindow">
+          <span data-ttu-id="a1c69-132">Especifica la ventana a la que se llama para mostrar la configuración de cifrado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-132">Specifies the window that is called to display the encryption settings.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="a1c69-133">Usado por la <see cref="T:Microsoft.Office.Core.EncryptionProvider" /> objeto para crear una nueva sesión de cifrado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-133">Used by the <see cref="T:Microsoft.Office.Core.EncryptionProvider" /> object to create a new encryption session.</span>
+          </span>
+          <span data-ttu-id="a1c69-134">En esta sesión se utiliza el proveedor en caché la información específica del documento sobre el cifrado, los usuarios y los derechos mientras el documento está en la memoria.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-134">This session is used by the provider to cache document-specific information about the encryption, users, and rights while the document is in memory.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="a1c69-135">
+            <b>Integer</b>
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-135">
+              <b>Integer</b>
+            </span>
+          </span>
+        </returns>
+        <remarks>
+          <span data-ttu-id="a1c69-136">
+            <para>Por el complemento COM llama a este método.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-136">
+              <para>This method is called by your COM add-in.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public int Save (int SessionHandle, object EncryptionData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Save([in]int32 SessionHandle, [in]object EncryptionData) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.EncryptionProvider.Save(System.Int32,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Save (SessionHandle As Integer, EncryptionData As Object) As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; int Save(int SessionHandle, System::Object ^ EncryptionData);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743813)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="SessionHandle" Type="System.Int32" />
+        <Parameter Name="EncryptionData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="SessionHandle">
+          <span data-ttu-id="a1c69-137">Id. de la sesión actual.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-137">The ID of the current session.</span>
+          </span>
+        </param>
+        <param name="EncryptionData">
+          <span data-ttu-id="a1c69-138">Contiene la información de cifrado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-138">Contains the encryption information.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="a1c69-139">Guarda un documento cifrado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-139">Saves an encrypted document.</span>
+          </span>
+        </summary>
+        <returns>
+          <span data-ttu-id="a1c69-140">
+            <b>Integer</b>
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-140">
+              <b>Integer</b>
+            </span>
+          </span>
+        </returns>
+        <remarks>
+          <span data-ttu-id="a1c69-141">
+            <para>Al guardar un archivo en el formato Office Open XML archivo (que es el único formato que admite el cifrado de archivos personalizado), a continuación, se llama al proveedor por el complemento COM para cifrar el documento. Si se intenta guardar en un formato que no es compatible con el cifrado de archivos personalizado y tiene los derechos adecuados para hacerlo, Microsoft Office guardará el documento sin cifrado. Esto permite que los documentos se exportarán a formatos que no admiten el cifrado o la administración de derechos.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-141">
+              <para>When you save a file to the Office Open XML File Format (which is the only format that supports custom file encryption), then the provider is called by your COM add-in to encrypt the document. If you attempt to save to a format that does not support custom file encryption and you have the appropriate rights to do so, then Microsoft Office will save the document without encryption. This allows documents to be exported to formats that do not support encryption or rights management.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowSettings">
+      <MemberSignature Language="C#" Value="public void ShowSettings (int SessionHandle, object ParentWindow, bool ReadOnly, out bool Remove);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowSettings([in]int32 SessionHandle, [in]object ParentWindow, [in]bool ReadOnly, [out] bool&amp; Remove) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.EncryptionProvider.ShowSettings(System.Int32,System.Object,System.Boolean,System.Boolean@)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ShowSettings (SessionHandle As Integer, ParentWindow As Object, ReadOnly As Boolean, ByRef Remove As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ShowSettings(int SessionHandle, System::Object ^ ParentWindow, bool ReadOnly, [Runtime::InteropServices::Out] bool % Remove);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743816)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="SessionHandle" Type="System.Int32" />
+        <Parameter Name="ParentWindow" Type="System.Object" />
+        <Parameter Name="ReadOnly" Type="System.Boolean" />
+        <Parameter Name="Remove" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="SessionHandle">
+          <span data-ttu-id="a1c69-142">Id. de la sesión actual.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-142">The ID of the current session.</span>
+          </span>
+        </param>
+        <param name="ParentWindow">
+          <span data-ttu-id="a1c69-143">Especifica la ventana a la que se llama para mostrar la configuración de cifrado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-143">Specifies the window that is called to display the encryption settings.</span>
+          </span>
+        </param>
+        <param name="ReadOnly">
+          <span data-ttu-id="a1c69-144">Especifica si desea que el usuario pueda modificar la configuración de cifrado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-144">Specifies whether you want the user to be able to change the encryption settings.</span>
+          </span>
+        </param>
+        <param name="Remove">
+          <span data-ttu-id="a1c69-145">Si <b>es True</b>, el cifrado de un documento se quitará durante la siguiente operación de guardar.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-145">If <b>True</b>, the encryption for a document will be removed during the next save operation.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="a1c69-146">Se utiliza para mostrar un cuadro de diálogo con la configuración de cifrado correspondiente al documento actual.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-146">Used to display a dialog of the encryption settings for the current document.</span>
+          </span>
+        </summary>
+        <remarks>
+          <span data-ttu-id="a1c69-147">
+            <para>Sólo puede llamar a este método en un documento ya se ha cifrado. Puede usar este método en el complemento COM para mostrar la experiencia del usuario que desee según las misiones del usuario. Por ejemplo, en un escenario de cifrado puro, puede mostrar un cuadro de diálogo para cambiar la contraseña del documento. En un escenario de administración de derechos, puede decidir si desea mostrar un cuadro de diálogo para cambiar los permisos o mostrar los permisos del usuario.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="a1c69-147">
+              <para>This method can only be called on an already encrypted document. You can use this method in your COM add-in to display whatever user experience you like based on the user's missions. For example, in a pure encryption scenario, you can display a dialog box to change the document’s password. In a rights management scenario, you can decide whether to show a dialog box for changing permissions or show the user’s permissions.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
