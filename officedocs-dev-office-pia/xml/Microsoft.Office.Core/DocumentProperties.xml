@@ -1,0 +1,394 @@
+<Type Name="DocumentProperties" FullName="Microsoft.Office.Core.DocumentProperties">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="eb1823ca0268f88c93f5386e69810ede55a18de1" />
+    <Meta Name="ms.sourcegitcommit" Value="f41bc3cdd2c00b9a51a4340ac823a9e309633924" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="es-ES" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20663333" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface DocumentProperties : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DocumentProperties implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Core.DocumentProperties" />
+  <TypeSignature Language="VB.NET" Value="Public Interface DocumentProperties&#xA;Implements IEnumerable" />
+  <TypeSignature Language="C++ CLI" Value="public interface class DocumentProperties : System::Collections::IEnumerable" />
+  <AssemblyInfo>
+    <AssemblyName>office</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("2DF8D04D-5BFA-101B-BDE5-00AA0044DE52")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4096)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="2fd40-101">Una colección de <see cref="T:Microsoft.Office.Core.DocumentProperty" /> objetos.</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="2fd40-101">A collection of <see cref="T:Microsoft.Office.Core.DocumentProperty" /> objects.</span>
+      </span>
+    </summary>
+    <remarks>
+      <span data-ttu-id="2fd40-102">
+        <para>Cada objeto <b>DocumentProperty</b> representa una propiedad integrada o personalizada de un documento contenedor.</para> Uso de 
+      <para>el <see cref="M:Microsoft.Office.Core.DocumentProperties.Add(System.String,System.Boolean,System.Object,System.Object,System.Object)" /> (método) para crear una nueva propiedad personalizada y agregarla a la colección <b>DocumentProperties</b> . No se puede usar el método <b>Add</b> para crear una propiedad de documento integrada.</para><para>Uso <b>BuiltinDocumentProperties</b>(<paramref name="index" />), donde <paramref name="index" /> es el número de índice de la propiedad de documento integrada, para devolver un único objeto <b>DocumentProperty</b> que representa una propiedad de documento integrada específica. Utilice <b>CustomDocumentProperties</b>(<paramref name="index" />), donde <paramref name="index" /> es el número de la propiedad de documento personalizada, para devolver un objeto <b>DocumentProperty</b> que representa una propiedad de documento personalizada específica.</para><para /></span>
+      <span class="sxs-lookup">
+        <span data-stu-id="2fd40-102">
+          <para>Each <b>DocumentProperty</b> object represents a built-in or custom property of a container document.</para>
+          <para>Use the <see cref="M:Microsoft.Office.Core.DocumentProperties.Add(System.String,System.Boolean,System.Object,System.Object,System.Object)" /> method to create a new custom property and add it to the <b>DocumentProperties</b> collection. You cannot use the <b>Add</b> method to create a built-in document property.</para>
+          <para>Use <b>BuiltinDocumentProperties</b>(<paramref name="index" />), where <paramref name="index" /> is the index number of the built-in document property, to return a single <b>DocumentProperty</b> object that represents a specific built-in document property. Use <b>CustomDocumentProperties</b>(<paramref name="index" />), where <paramref name="index" /> is the number of the custom document property, to return a <b>DocumentProperty</b> object that represents a specific custom document property.</para>
+          <para />
+        </span>
+      </span>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.DocumentProperty Add (string Name, bool LinkToContent, object Type, object Value, object LinkSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Core.DocumentProperty Add([in]string Name, [in]bool LinkToContent, [in]object Type, [in]object Value, [in]object LinkSource) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.DocumentProperties.Add(System.String,System.Boolean,System.Object,System.Object,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Add (Name As String, LinkToContent As Boolean, Optional Type As Object, Optional Value As Object, Optional LinkSource As Object) As DocumentProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.LCIDConversion(5)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.DocumentProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Name" Type="System.String" />
+        <Parameter Name="LinkToContent" Type="System.Boolean" />
+        <Parameter Name="Type" Type="System.Object" />
+        <Parameter Name="Value" Type="System.Object" />
+        <Parameter Name="LinkSource" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Name">
+          <span data-ttu-id="2fd40-103">
+            <b>String</b> requerida.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-103">Required <b>String</b>.</span>
+          </span>
+          <span data-ttu-id="2fd40-104">El nombre de la propiedad.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-104">The name of the property.</span>
+          </span>
+        </param>
+        <param name="LinkToContent">
+          <span data-ttu-id="2fd40-105">Requerido de <b>tipo Boolean</b>.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-105">Required <b>Boolean</b>.</span>
+          </span>
+          <span data-ttu-id="2fd40-106">Especifica si la propiedad está vinculada al contenido del documento contenedor.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-106">Specifies whether the property is linked to the contents of the container document.</span>
+          </span>
+          <span data-ttu-id="2fd40-107">Si este argumento es <b>True</b>, el <paramref name="LinkSource" /> se requiere argumento; Si es <b>False</b>, se requiere el argumento de valor.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-107">If this argument is <b>True</b>, the <paramref name="LinkSource" /> argument is required; if it's <b>False</b>, the value argument is required.</span>
+          </span>
+        </param>
+        <param name="Type">
+          <span data-ttu-id="2fd40-108">
+            <b>Objeto</b>de opcional.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-108">Optional <b>Object</b>.</span>
+          </span>
+          <span data-ttu-id="2fd40-109">El tipo de datos de la propiedad.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-109">The data type of the property.</span>
+          </span>
+          <span data-ttu-id="2fd40-110">Puede ser uno de los siguientes <see cref="T:Microsoft.Office.Core.MsoDocProperties" /> constantes: <b>msoPropertyTypeBoolean</b>, <b>msoPropertyTypeDate</b>, <b>msoPropertyTypeFloat</b>, <b>msoPropertyTypeNumber</b>o <b>msoPropertyTypeString</b>.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-110">Can be one of the following <see cref="T:Microsoft.Office.Core.MsoDocProperties" /> constants: <b>msoPropertyTypeBoolean</b>, <b>msoPropertyTypeDate</b>, <b>msoPropertyTypeFloat</b>, <b>msoPropertyTypeNumber</b>, or <b>msoPropertyTypeString</b>.</span>
+          </span>
+        </param>
+        <param name="Value">
+          <span data-ttu-id="2fd40-111">
+            <b>Objeto</b>de opcional.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-111">Optional <b>Object</b>.</span>
+          </span>
+          <span data-ttu-id="2fd40-112">El valor de la propiedad, si no está vinculada al contenido del documento contenedor.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-112">The value of the property, if it's not linked to the contents of the container document.</span>
+          </span>
+          <span data-ttu-id="2fd40-113">El valor se convierte para que coincida con el tipo de datos especificado por el argumento de tipo.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-113">The value is converted to match the data type specified by the type argument.</span>
+          </span>
+          <span data-ttu-id="2fd40-114">Si no se puede convertir, se produce un error.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-114">If it can't be converted, an error occurs.</span>
+          </span>
+          <span data-ttu-id="2fd40-115">Si <paramref name="LinkToContent" /> es <b>True</b>, el <paramref name="Value" /> se omite el argumento y la nueva propiedad de documento se asigna un valor predeterminado hasta que la aplicación contenedora actualice los valores de propiedad vinculado (normalmente cuando se guarda el documento).</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-115">If <paramref name="LinkToContent" /> is <b>True</b>, the <paramref name="Value" /> argument is ignored and the new document property is assigned a default value until the linked property values are updated by the container application (usually when the document is saved).</span>
+          </span>
+        </param>
+        <param name="LinkSource">
+          <span data-ttu-id="2fd40-116">
+            <b>Objeto</b>de opcional.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-116">Optional <b>Object</b>.</span>
+          </span>
+          <span data-ttu-id="2fd40-117">Por alto si <paramref name="LinkToContent" /> es <b>False</b>.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-117">Ignored if <paramref name="LinkToContent" /> is <b>False</b>.</span>
+          </span>
+          <span data-ttu-id="2fd40-118">El origen de la propiedad vinculada.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-118">The source of the linked property.</span>
+          </span>
+          <span data-ttu-id="2fd40-119">La aplicación contenedora determina qué tipos de origen de vinculación puede utilizar.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-119">The container application determines what types of source linking you can use.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="2fd40-120">Crea una nueva propiedad de documento personalizada.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-120">Creates a new custom document property.</span>
+          </span>
+        </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <span data-ttu-id="2fd40-121">
+            <para>Si agrega una propiedad de documento personalizada a la <see cref="T:Microsoft.Office.Core.DocumentProperties" /> colección que está vinculado a un valor determinado en un documento de Microsoft Office, debe guardar el documento para ver el cambio en el <see cref="T:Microsoft.Office.Core.DocumentProperty" /> objeto.</para>
+            <para>Sólo puede agregar una nueva propiedad de documento a la colección <b>DocumentProperties</b> personalizada.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-121">
+              <para>If you add a custom document property to the <see cref="T:Microsoft.Office.Core.DocumentProperties" /> collection that’s linked to a given value in a Microsoft Office document, you must save the document to see the change to the <see cref="T:Microsoft.Office.Core.DocumentProperty" /> object.</para>
+              <para>You can only add a new document property to the custom <b>DocumentProperties</b> collection.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public object Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentProperties.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Application { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743813)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="2fd40-122">Devuelve un objeto <b>Application</b> que representa la aplicación contenedora para el objeto.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-122">Returns an <b>Application</b> object that represents the container application for the object.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentProperties.Count" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(4)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="2fd40-123">Devuelve un <b>entero</b> que indica el número de elementos de la colección especificada.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-123">Returns an <b>Integer</b> indicating the number of items in the specified collection.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentProperties.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743814)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="2fd40-124">Devuelve un entero de 32 bits que indica la aplicación en la que se creó el objeto especificado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-124">Returns a 32-bit integer that indicates the application in which the specified object was created.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>
+          <span data-ttu-id="2fd40-125">
+            <para>Si el objeto especificado se creó en Microsoft Word, esta propiedad devuelve 1297307460, que representa la cadena MSWD; Si se creó en Microsoft Excel, esta propiedad devuelve 1480803660. Este valor también puede representarse mediante la constante <b>wdCreatorCode</b> en Word o <b>xlCreatorCode</b> en Excel.</para> Propiedad 
+          <para>el <b>creador</b> principalmente se diseñó para usarse en Macintosh, donde cada aplicación tiene un código de creador de cuatro caracteres. Por ejemplo, Microsoft Word tiene el código de creador MSWD. Para obtener información adicional acerca de esta propiedad, vea la referencia del lenguaje ayuda que se incluye con Microsoft Office Macintosh Edition.</para><para>El <b>creador</b> de la propiedad devuelve siempre el identificador numérico de la aplicación activa, al igual que el <see cref="P:Microsoft.Office.Core.DocumentProperties.Application" /> propiedad siempre devuelve el nombre de la aplicación activa en forma de cadena. Utilice la propiedad <b>CreatedBy</b> de la <see cref="T:Microsoft.Office.Core.SharedWorkspaceFile" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceFolder" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceLink" />, y <see cref="T:Microsoft.Office.Core.SharedWorkspaceTask" /> objetos para devolver el nombre de la persona que creó dichos objetos. Utilice las propiedades de documento para devolver información acerca de los autores de los documentos de Office.</para><para /></span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-125">
+              <para>If the specified object was created in Microsoft Word, this property returns 1297307460, which represents the string MSWD; if created in Microsoft Excel, this property returns 1480803660. This value can also be represented by the constant <b>wdCreatorCode</b> in Word, or <b>xlCreatorCode</b> in Excel.</para>
+              <para>The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code. For example, Microsoft Word has the creator code MSWD. For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</para>
+              <para>The <b>Creator</b> property always returns the numeric identifier for the active application, just as the <see cref="P:Microsoft.Office.Core.DocumentProperties.Application" /> property always returns the name of the active application in string form. Use the <b>CreatedBy</b> property of the <see cref="T:Microsoft.Office.Core.SharedWorkspaceFile" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceFolder" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceLink" />, and <see cref="T:Microsoft.Office.Core.SharedWorkspaceTask" /> objects to return the name of the individual who created those objects. Use document properties to return information about the authors of Office documents.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.DocumentProperties.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.TypeLibFunc(1024)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.DocumentProperty this[object Index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Core.DocumentProperty Item(object)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentProperties.Item(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(Index As Object) As DocumentProperty" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::DocumentProperty ^ default[System::Object ^] { Microsoft::Office::Core::DocumentProperty ^ get(System::Object ^ Index); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.LCIDConversion(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.DocumentProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Index">
+          <span data-ttu-id="2fd40-126">
+            <b>Objeto</b>requerido.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-126">Required <b>Object</b>.</span>
+          </span>
+          <span data-ttu-id="2fd40-127">Nombre o número de índice de la propiedad de documento que se va a devolver.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-127">The name or index number of the document property returned.</span>
+          </span>
+        </param>
+        <summary>
+          <span data-ttu-id="2fd40-128">Devuelve un <see cref="T:Microsoft.Office.Core.DocumentProperty" /> objeto desde el <see cref="T:Microsoft.Office.Core.DocumentProperties" /> colección.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-128">Returns a <see cref="T:Microsoft.Office.Core.DocumentProperty" /> object from the <see cref="T:Microsoft.Office.Core.DocumentProperties" /> collection.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentProperties.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="2fd40-129">Devuelve el objeto <b>primario</b> del objeto especificado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="2fd40-129">Returns the <b>Parent</b> object for the specified object.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

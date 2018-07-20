@@ -1,0 +1,336 @@
+<Type Name="BalloonCheckbox" FullName="Microsoft.Office.Core.BalloonCheckbox">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="dd64a9eca6edf9a9e9429466e1e986137cf7aeed" />
+    <Meta Name="ms.sourcegitcommit" Value="f41bc3cdd2c00b9a51a4340ac823a9e309633924" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="es-ES" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20663362" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface BalloonCheckbox : Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract BalloonCheckbox implements class Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Core.BalloonCheckbox" />
+  <TypeSignature Language="VB.NET" Value="Public Interface BalloonCheckbox&#xA;Implements _IMsoDispObj" />
+  <TypeSignature Language="C++ CLI" Value="public interface class BalloonCheckbox : Microsoft::Office::Core::_IMsoDispObj" />
+  <AssemblyInfo>
+    <AssemblyName>office</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Core._IMsoDispObj</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("000C0328-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4304)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="1949c-101">Representa una casilla de verificación en el globo del Ayudante de Office.</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="1949c-101">Represents a checkbox in the Office Assistant balloon.</span>
+      </span>
+    </summary>
+    <remarks>
+      <span data-ttu-id="1949c-102">
+        <para>El objeto <b>BalloonCheckBox</b> es un miembro de la <see cref="T:Microsoft.Office.Core.BalloonCheckboxes" /> colección.</para> Las casillas de verificación del globo de 
+      <para>Mostrar las selecciones del usuario hasta que el usuario cierra el globo. Puede usar rótulos del globo para devolver el número correspondiente a la elección del usuario en el método <b>Select</b> en cuanto el usuario hace clic en el botón situado junto a la etiqueta. Para pasar valores al método <b>Select</b> en función de la elección del usuario, debe tener el tipo de globo establecido en <b>msoBalloonTypeButtons</b>.</para><para>Usar <b>las casillas de verificación</b>(<paramref name="index" />), donde <paramref name="index" /> es un número comprendido entre 1 y 5, para devolver un único objeto <b>BalloonCheckBox</b> . Puede haber hasta cinco casillas de verificación en un globo; cada casilla de verificación aparece cuando se asigna un valor a su <see cref="P:Microsoft.Office.Core.BalloonCheckbox.Text" /> (propiedad).</para><para /></span>
+      <span class="sxs-lookup">
+        <span data-stu-id="1949c-102">
+          <para>The <b>BalloonCheckBox</b> object is a member of the <see cref="T:Microsoft.Office.Core.BalloonCheckboxes" /> collection.</para>
+          <para>Balloon checkboxes display the user's choices until the user dismisses the balloon. You can use balloon labels to return a number corresponding to the user's choice in the <b>Select</b> method as soon as the user clicks the button beside the label. To pass values to the <b>Select</b> method based on the user's choice, you must have the balloon type set to <b>msoBalloonTypeButtons</b>.</para>
+          <para>Use <b>CheckBoxes</b>(<paramref name="index" />), where <paramref name="index" /> is a number from 1 through 5, to return a single <b>BalloonCheckBox</b> object. There can be up to five checkboxes in one balloon; each checkbox appears when a value is assigned to its <see cref="P:Microsoft.Office.Core.BalloonCheckbox.Text" /> property.</para>
+          <para />
+        </span>
+      </span>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public object Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.BalloonCheckbox.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Application { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Application</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="1949c-103">Devuelve un objeto <b>Application</b> que representa la aplicación contenedora para el objeto.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="1949c-103">Returns an <b>Application</b> object that represents the container application for the object.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="public bool Checked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Checked" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.BalloonCheckbox.Checked" />
+      <MemberSignature Language="VB.NET" Value="Public Property Checked As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Checked { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610809347)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610809347)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(1610809347)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="1949c-104">Determina si está activada la casilla de verificación especificada en el globo del Ayudante de Office.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="1949c-104">Determines if the specified checkbox in the Office Assistant balloon is checked.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>
+          <span data-ttu-id="1949c-105">
+            <para>Parte del contenido de este tema puede no ser aplicable a algunos idiomas.</para>
+            <para>El valor devuelto es <b>True</b> si la casilla de verificación especificada en el globo del Ayudante de Office es, o va a, revisar; <b>False</b> en caso contrario. </para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="1949c-105">
+              <para>Some of the content in this topic may not be applicable to some languages.</para>
+              <para>The returned value is <b>True</b> if the specified checkbox in the Office Assistant balloon is, or is to be, checked; <b>False</b> otherwise. </para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.BalloonCheckbox.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Creator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="1949c-106">Devuelve un entero de 32 bits que indica la aplicación en la que se creó el objeto especificado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="1949c-106">Returns a 32-bit integer that indicates the application in which the specified object was created.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>
+          <span data-ttu-id="1949c-107">
+            <para>Como un ejemplo de cómo funciona esta propiedad, devuelve 1297307460, que representa la cadena "MSWD", si el objeto se creó en Microsoft Word. Esta propiedad devuelve 1480803660 si el objeto se creó en Microsoft Excel. Este valor también puede representarse mediante la constante <b>wdCreatorCode</b> en Word o <b>xlCreatorCode</b> en Excel.</para> Propiedad 
+          <para>el <b>creador</b> principalmente se diseñó para usarse en Macintosh, donde cada aplicación tiene un código de creador de cuatro caracteres. Por ejemplo, Microsoft Word tiene el código de creador MSWD. Para obtener información adicional acerca de esta propiedad, vea la referencia del lenguaje ayuda que se incluye con Microsoft Office Macintosh Edition.</para><para>El <b>creador</b> de la propiedad devuelve siempre el identificador numérico de la aplicación activa, tal como la propiedad <b>Application</b> devuelve siempre el nombre de la aplicación activa en forma de cadena. Utilice la propiedad <b>CreatedBy</b> de la <see cref="T:Microsoft.Office.Core.SharedWorkspaceFile" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceFolder" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceLink" />, y <see cref="T:Microsoft.Office.Core.SharedWorkspaceTask" /> objetos para devolver el nombre de la persona que creó dichos objetos. Utilice las propiedades de documento para devolver información acerca de los autores de los documentos de Office.</para><para /></span>
+          <span class="sxs-lookup">
+            <span data-stu-id="1949c-107">
+              <para>As an example of how this property works, it returns 1297307460, which represents the string "MSWD", if the object was created in Microsoft Word; this property returns 1480803660 if the object was created in Microsoft Excel. This value can also be represented by the constant <b>wdCreatorCode</b> in Word, or <b>xlCreatorCode</b> in Excel.</para>
+              <para>The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code. For example, Microsoft Word has the creator code MSWD. For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</para>
+              <para>The <b>Creator</b> property always returns the numeric identifier for the active application, just as the <b>Application</b> property always returns the name of the active application in string form. Use the <b>CreatedBy</b> property of the <see cref="T:Microsoft.Office.Core.SharedWorkspaceFile" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceFolder" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceLink" />, and <see cref="T:Microsoft.Office.Core.SharedWorkspaceTask" /> objects to return the name of the individual who created those objects. Use document properties to return information about the authors of Office documents.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.BalloonCheckbox.Item" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="1949c-108">Devuelve el texto asociado a un objeto.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="1949c-108">Returns the text associated with an object.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.BalloonCheckbox.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610809345)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610809345)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="1949c-109">Devuelve o establece el nombre del objeto especificado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="1949c-109">Returns or sets the name of the specified object.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.BalloonCheckbox.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610809346)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610809346)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="1949c-110">Devuelve el objeto primario del objeto especificado.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="1949c-110">Returns the parent object for the specified object.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.BalloonCheckbox.Text" />
+      <MemberSignature Language="VB.NET" Value="Public Property Text As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Text { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610809349)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610809349)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(1610809349)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="1949c-111">Devuelve o establece el texto que aparece junto a una casilla de verificación o una etiqueta en el globo del Ayudante de Office.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="1949c-111">Returns or sets the text displayed next to a checkbox or label in the Office Assistant balloon.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>
+          <span data-ttu-id="1949c-112">
+            <para>Parte del contenido de este tema puede no ser aplicable a algunos idiomas.</para>
+            <para>Puede especificar que se muestre un gráfico determinado utilizando la sintaxis siguiente: {<paramref name="type location sizing_factor" />}, donde <paramref name="type" /> es bmp (mapa de bits) o wmf (metarchivo de Windows); <paramref name="location" /> es el recurso de identificador o la ruta de acceso y nombre de archivo; y <paramref name="sizing_factor" /> indica el ancho del archivo .wmf (<paramref name="sizing_factor" /> se omite para los archivos .bmp).</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="1949c-112">
+              <para>Some of the content in this topic may not be applicable to some languages.</para>
+              <para>You can specify that a particular graphic be displayed by using the following syntax: {<paramref name="type location sizing_factor" />}, where <paramref name="type" /> is bmp (bitmap) or wmf (Windows metafile); <paramref name="location" /> is the resource ID or the path and file name; and <paramref name="sizing_factor" /> denotes the width of the .wmf file (<paramref name="sizing_factor" /> is omitted for .bmp files).</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
