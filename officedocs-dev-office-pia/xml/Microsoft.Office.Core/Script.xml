@@ -1,0 +1,371 @@
+<Type Name="Script" FullName="Microsoft.Office.Core.Script">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="2140b9d9200bd6144f2a36ebdceefe33a91ca36c" />
+    <Meta Name="ms.sourcegitcommit" Value="f41bc3cdd2c00b9a51a4340ac823a9e309633924" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="es-ES" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20663547" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface Script : Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Script implements class Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Core.Script" />
+  <TypeSignature Language="VB.NET" Value="Public Interface Script&#xA;Implements _IMsoDispObj" />
+  <TypeSignature Language="C++ CLI" Value="public interface class Script : Microsoft::Office::Core::_IMsoDispObj" />
+  <AssemblyInfo>
+    <AssemblyName>office</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Core._IMsoDispObj</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("000C0341-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4304)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa un bloque de secuencias de comandos HTML en un documento de Microsoft Word, en una hoja de cálculo de Microsoft Excel o en una diapositiva de Microsoft PowerPoint.</summary>
+    <remarks>
+      <para>El objeto <b>Script</b> es un miembro de la <see cref="T:Microsoft.Office.Core.Scripts" /> colección.</para>
+      <para>Uso <b>Scripts.Item</b>(<paramref name="index" />), donde <paramref name="index" /> es el nombre, el identificador o el número de índice de una secuencia de comandos, para devolver un solo objeto <b>Script</b> . Cada objeto <b>Script</b> se identifica con el <see cref="P:Microsoft.Office.Core.Script.Id" /> (propiedad), que proporciona un nombre adecuado que puede utilizar para tener acceso a la secuencia de comandos</para>
+      <para>Puede especificar el lenguaje de scripting utilizado en la secuencia de comandos cambiando el <see cref="P:Microsoft.Office.Core.Script.Language" /> (propiedad).</para>
+      <para>Puede comprobar la ubicación de la forma del delimitador de secuencia de comandos dentro de un documento HTML utilizando la <see cref="P:Microsoft.Office.Core.Script.Location" /> (propiedad).</para>
+      <para>Puede comprobar o establecer los atributos agregados a la &lt;secuencia de comandos&gt; etiqueta (a excepción de los atributos ID y LANGUAGE) mediante el uso de la <see cref="P:Microsoft.Office.Core.Script.Extended" /> (propiedad).</para>
+      <para>Puede comprobar o establecer el texto de secuencia de comandos asociado con una secuencia de comandos determinada mediante el uso de la <see cref="P:Microsoft.Office.Core.Script.ScriptText" /> (propiedad).</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public object Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.Script.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Application { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Application</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un objeto <b>Application</b> que representa la aplicación contenedora para el objeto.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.Script.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Creator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un entero de 32 bits que indica la aplicación en la que se creó el objeto especificado.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Si el objeto especificado se creó en Microsoft Word, esta propiedad devuelve 1297307460, que representa la cadena MSWD; Si se creó en Microsoft Excel, esta propiedad devuelve 1480803660. Este valor también puede representarse mediante la constante <b>wdCreatorCode</b> en Word o <b>xlCreatorCode</b> en Excel.</para> Propiedad 
+          <para>el <b>creador</b> principalmente se diseñó para usarse en Macintosh, donde cada aplicación tiene un código de creador de cuatro caracteres. Por ejemplo, Microsoft Word tiene el código de creador MSWD. Para obtener información adicional acerca de esta propiedad, vea la referencia del lenguaje ayuda que se incluye con Microsoft Office Macintosh Edition.</para><para>El <b>creador</b> de la propiedad devuelve siempre el identificador numérico de la aplicación activa, al igual que el <see cref="P:Microsoft.Office.Core.Script.Application" /> propiedad siempre devuelve el nombre de la aplicación activa en forma de cadena. Utilice la propiedad <b>CreatedBy</b> de la <see cref="T:Microsoft.Office.Core.SharedWorkspaceFile" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceFolder" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceLink" />, y <see cref="T:Microsoft.Office.Core.SharedWorkspaceTask" /> objetos para devolver el nombre de la persona que creó dichos objetos. Utilice las propiedades de documento para devolver información acerca de los autores de los documentos de Office.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.Script.Delete" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Delete ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Delete();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610809352)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Elimina el objeto especificado de la colección.</summary>
+        <remarks>
+          <para>Para el <see cref="T:Microsoft.Office.Core.Scripts" /> colección, utilizando el método <b>Delete</b> quita todos los scripts desde el documento de Microsoft Word especificado, hoja de cálculo de Microsoft Excel o diapositiva de Microsoft PowerPoint. Un delimitador de secuencia de comandos está representado por una forma en la aplicación host. Por lo tanto, el objeto <b>Shape</b> asociado a cada delimitador de secuencia de comandos del tipo <b>msoScriptAnchor</b> se elimina de la colección <b>Shapes</b> en Excel y PowerPoint y de las colecciones <b>InlineShapes</b> y <b>las formas</b> en Word.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extended">
+      <MemberSignature Language="C#" Value="public string Extended { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Extended" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.Script.Extended" />
+      <MemberSignature Language="VB.NET" Value="Public Property Extended As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Extended { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610809345)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610809345)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(1610809345)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve o establece los atributos agregados a la &lt;secuencia de comandos&gt; etiqueta, a excepción de los atributos ID y LANGUAGE.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Los atributos están separados por espacios, al igual que ocurre en HTML. No se puede pasar el atributo LANGUAGE o el atributo ID utilizando la propiedad <b>Extended</b> .</para>
+          <para>La aplicación Microsoft Office host no proporciona un medio para comprobar la sintaxis de los atributos pasados.</para>
+          <para>Si pasa el atributo LANGUAGE en la propiedad <b>Extended</b> , la &lt;secuencia de comandos&gt; etiqueta recibe dos opciones de idioma, lo que provoca un conflicto.</para>
+          <para>Si pasa un atributo ID en la propiedad <b>Extended</b> y no se ha establecido ID a través de uno el parámetro ID de la <see cref="M:Microsoft.Office.Core.Scripts.Add(System.Object,Microsoft.Office.Core.MsoScriptLocation,Microsoft.Office.Core.MsoScriptLanguage,System.String,System.String,System.String)" /> método o el <see cref="P:Microsoft.Office.Core.Script.Id" /> (propiedad) de la <see cref="T:Microsoft.Office.Core.Script" /> de objeto, el identificador se exportará correctamente.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.Script.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Property Id As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Id { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610809347)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610809347)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(1610809347)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve o establece el identificador de un <see cref="T:Microsoft.Office.Core.Script" /> objeto.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>El identificador devuelto es el atributo ID de la &lt;secuencia de comandos&gt; etiqueta en HTML. Si no hay ningún atributo de identificador especificado en el &lt;secuencia de comandos&gt; etiqueta, la propiedad <b>Id</b> devuelve una cadena vacía.</para>
+          <para>
+            <b>Id</b> especifica un identificador SGML utilizado para los elementos de nomenclatura. Identificadores válidos incluyen cualquier cadena que comience con una letra y está compuesta por caracteres alfanuméricos; la cadena también puede incluir el carácter de subrayado (_).</para>
+          <para>El identificador debe ser único dentro del documento HTML.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.MsoScriptLanguage Language { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Core.MsoScriptLanguage Language" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.Script.Language" />
+      <MemberSignature Language="VB.NET" Value="Public Property Language As MsoScriptLanguage" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoScriptLanguage Language { Microsoft::Office::Core::MsoScriptLanguage get(); void set(Microsoft::Office::Core::MsoScriptLanguage value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610809349)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610809349)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(1610809349)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.MsoScriptLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve o establece el lenguaje de secuencias de comandos de la secuencia de comandos activa.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>El <see cref="T:Microsoft.Office.Core.MsoScriptLanguage" /> constantes usadas con la propiedad <b>Language</b> también se usan en el <paramref name="Language" /> parámetro en el <see cref="M:Microsoft.Office.Core.Scripts.Add(System.Object,Microsoft.Office.Core.MsoScriptLocation,Microsoft.Office.Core.MsoScriptLanguage,System.String,System.String,System.String)" /> (método) de la <see cref="T:Microsoft.Office.Core.Scripts" /> colección.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.MsoScriptLocation Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Core.MsoScriptLocation Location" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.Script.Location" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Location As MsoScriptLocation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoScriptLocation Location { Microsoft::Office::Core::MsoScriptLocation get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610809351)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610809351)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.MsoScriptLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve la ubicación del delimitador de secuencia de comandos en el documento HTML especificado.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Las etiquetas de secuencia de comandos en un documento HTML pueden aparecer en cualquier lugar entre la &lt;HTML&gt; las etiquetas en el documento. En Microsoft Word, Excel o PowerPoint, sólo los delimitadores de secuencia de comandos que se encuentran entre el &lt;cuerpo&gt; etiquetas están visibles. La secuencia de comandos HTML adicional que aparece antes o después de la &lt;cuerpo&gt; se almacena en las etiquetas, pero no es visibles para el usuario.</para>
+          <para>La <see cref="T:Microsoft.Office.Core.Scripts" /> colección contiene todos los delimitadores de secuencia de comandos que aparecen en el documento, desde dentro o fuera del texto principal del documento. Con el <paramref name="Location" /> argumento de la <see cref="M:Microsoft.Office.Core.Scripts.Add(System.Object,Microsoft.Office.Core.MsoScriptLocation,Microsoft.Office.Core.MsoScriptLanguage,System.String,System.String,System.String)" /> (método), puede insertar los delimitadores de secuencia de comandos dentro de la &lt;HEAD&gt; y &lt;cuerpo&gt; las etiquetas en el documento HTML. También puede utilizar la propiedad <b>Location</b> para determinar donde se almacena un delimitador de secuencia de comandos determinado dentro del documento.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.Script.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610809344)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610809344)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el objeto <b>primario</b> del objeto especificado.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptText">
+      <MemberSignature Language="C#" Value="public string this { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ScriptText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.Script.ScriptText" />
+      <MemberSignature Language="VB.NET" Value="Default Public Property ScriptText As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve o establece el texto contenido en un bloque de script.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>La aplicación host de Microsoft Office no comprueba la sintaxis de la secuencia de comandos. La propiedad <b>ScriptText</b> es la propiedad predeterminada de la <see cref="T:Microsoft.Office.Core.Script" /> objeto.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shape">
+      <MemberSignature Language="C#" Value="public object Shape { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Shape" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.Script.Shape" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Shape As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Shape { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610809353)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610809353)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un objeto <b>Shape</b> o un objeto <b>InlineShape</b> , dependiendo de la aplicación host de Microsoft Office.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>La propiedad <b>Shape</b> devuelve un objeto <b>Shape</b> en Microsoft Excel y PowerPoint. En Word, la <b>forma</b> (propiedad) devuelve un objeto <b>Shape</b> si el delimitador de secuencia de comandos es flotante; Sin embargo, si se trata de un delimitador entre líneas, esta propiedad devuelve un objeto <b>InlineShape</b> .</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

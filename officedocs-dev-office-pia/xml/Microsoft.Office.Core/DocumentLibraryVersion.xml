@@ -1,0 +1,363 @@
+<Type Name="DocumentLibraryVersion" FullName="Microsoft.Office.Core.DocumentLibraryVersion">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="8aa1d25f3420d55e99cefaa13355cb193968865d" />
+    <Meta Name="ms.sourcegitcommit" Value="f41bc3cdd2c00b9a51a4340ac823a9e309633924" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="es-ES" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20663575" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface DocumentLibraryVersion : Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DocumentLibraryVersion implements class Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Core.DocumentLibraryVersion" />
+  <TypeSignature Language="VB.NET" Value="Public Interface DocumentLibraryVersion&#xA;Implements _IMsoDispObj" />
+  <TypeSignature Language="C++ CLI" Value="public interface class DocumentLibraryVersion : Microsoft::Office::Core::_IMsoDispObj" />
+  <AssemblyInfo>
+    <AssemblyName>office</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Core._IMsoDispObj</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("000C0387-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4288)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>El objeto <b>DocumentLibraryVersion</b> representa una versión guardada única de un documento compartido que tiene habilitado el control de versiones y está almacenado en una biblioteca de documentos en el servidor.</summary>
+    <remarks>
+      <para>Cada objeto <b>DocumentLibraryVersion</b> es un miembro del documento activo <see cref="T:Microsoft.Office.Core.DocumentLibraryVersions" /> colección.</para>
+      <para>Cada objeto <b>DocumentLibraryVersion</b> representa uno guardado versión del documento activo. Cuando está habilitado el control de versiones, se crea una nueva versión en el servidor cuando se producen las acciones que se enumeran a continuación; no se crean versiones adicionales cada vez que el usuario guarda los cambios realizados en el documento abierto.</para>
+      <list type="bullet">
+        <item>
+          <para>Comprobar pda.</para>
+        </item>
+        <item>
+          <para>Guardar - una nueva versión se crea en el servidor cuando el usuario guarda en primer lugar el documento después de abrirlo. Los cambios adicionales guardados mientras el documento está abierto se aplican a la misma versión.</para>
+        </item>
+        <item>
+          <para>Restaurar.</para>
+        </item>
+        <item>
+          <para>Cargar.</para>
+        </item>
+      </list>
+      <para>Usar el <see cref="P:Microsoft.Office.Core.DocumentLibraryVersion.Modified" />, <see cref="P:Microsoft.Office.Core.DocumentLibraryVersion.ModifiedBy" />, y <see cref="P:Microsoft.Office.Core.DocumentLibraryVersion.Comments" /> propiedades para devolver información sobre una versión guardada de un documento compartido.</para>
+      <para>Usar la <see cref="M:Microsoft.Office.Core.DocumentLibraryVersion.Open" /> método para abrir una versión anterior, o el <see cref="M:Microsoft.Office.Core.DocumentLibraryVersion.Restore" /> (método) para restaurar una versión anterior en lugar de la versión actual. Usar el <see cref="M:Microsoft.Office.Core.DocumentLibraryVersion.Delete" /> método para eliminar una versión.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public object Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentLibraryVersion.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Application { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Application</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un objeto <b>Application</b> que representa la aplicación contenedora para el objeto.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Comments">
+      <MemberSignature Language="C#" Value="public string Comments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Comments" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentLibraryVersion.Comments" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Comments As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Comments { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(4)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(4)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve cualquier comentario opcional asociado con la versión especificada del documento compartido.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Los usuarios pueden adjuntar comentarios sobre la versión a través de la interfaz de usuario de la biblioteca de documentos al proteger un documento que se ha desprotegido anteriormente.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentLibraryVersion.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Creator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un entero de 32 bits que indica la aplicación en la que se creó el objeto especificado.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Si el objeto se creó en Microsoft Word, esta propiedad devuelve 1297307460, que representa la cadena MSWD; en Microsoft Excel, esta propiedad devuelve 1480803660. Este valor también puede representarse mediante la constante <b>wdCreatorCode</b> en Word o <b>xlCreatorCode</b> en Excel.</para> Propiedad 
+          <para>el <b>creador</b> principalmente se diseñó para usarse en Macintosh, donde cada aplicación tiene un código de creador de cuatro caracteres. Por ejemplo, Microsoft Word tiene el código de creador MSWD. Para obtener información adicional acerca de esta propiedad, vea la referencia del lenguaje ayuda que se incluye con Microsoft Office Macintosh Edition.</para><para>El <b>creador</b> de la propiedad devuelve siempre el identificador numérico de la aplicación activa, al igual que el <see cref="P:Microsoft.Office.Core.DocumentLibraryVersion.Application" /> propiedad siempre devuelve el nombre de la aplicación activa en forma de cadena. Utilice la propiedad <b>CreatedBy</b> de la <see cref="T:Microsoft.Office.Core.SharedWorkspaceFile" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceFolder" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceLink" />, y <see cref="T:Microsoft.Office.Core.SharedWorkspaceTask" /> objetos para devolver el nombre de la persona que creó dichos objetos. Utilice las propiedades de documento para devolver información acerca de los autores de los documentos de Office.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.DocumentLibraryVersion.Delete" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Delete ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Delete();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(5)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quita una versión de la biblioteca de documentos desde el <see cref="T:Microsoft.Office.Core.DocumentLibraryVersions" /> colección.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public int Index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentLibraryVersion.Index" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Index As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Index { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un <b>entero</b> que representa el número de índice para un objeto de la colección.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>La posición del primer control de barra de comandos es 1. Los separadores no se cuentan el <see cref="T:Microsoft.Office.Core.CommandBarControls" /> colección.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modified">
+      <MemberSignature Language="C#" Value="public object this { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Modified" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentLibraryVersion.Modified" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Modified As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ default { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve la fecha y hora en que la versión especificada del documento compartido se guardó por última vez en el servidor.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Se crea una nueva versión en el servidor cada vez que un usuario abre el documento y se actualiza cuando el usuario guarda los cambios realizados; otras versiones no se crean cada vez que el usuario guarda los cambios realizados en el documento abierto. La propiedad <b>Modified</b> de la versión del documento activo representa la última vez que el usuario guardado los cambios en el documento abierto.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifiedBy">
+      <MemberSignature Language="C#" Value="public string ModifiedBy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ModifiedBy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentLibraryVersion.ModifiedBy" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ModifiedBy As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ModifiedBy { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(3)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(3)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el nombre del usuario que guardó por última vez la versión especificada del documento compartido en el servidor.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public object Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Open() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.DocumentLibraryVersion.Open" />
+      <MemberSignature Language="VB.NET" Value="Public Function Open () As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ Open();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(6)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Se abre la versión especificada del documento compartido de la <see cref="T:Microsoft.Office.Core.DocumentLibraryVersions" /> colección en modo de sólo lectura.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentLibraryVersion.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el objeto primario del objeto especificado.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Restore">
+      <MemberSignature Language="C#" Value="public object Restore ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Restore() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.DocumentLibraryVersion.Restore" />
+      <MemberSignature Language="VB.NET" Value="Public Function Restore () As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ Restore();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(7)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Restaura una versión previamente guardada de un documento compartido de la <see cref="T:Microsoft.Office.Core.DocumentLibraryVersions" /> colección.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>Use el método <b>Restore</b> para volver a una versión previamente guardada del documento activo. El método <b>Restore</b> realiza varias acciones:</para>
+          <list type="number">
+            <item>
+              <description>cambia la versión abierta del documento compartido al modo de sólo lectura, pero lo deja abierto.</description>
+            </item>
+            <item>
+              <description>Se abre la versión restaurada en modo de lectura y escritura.</description>
+            </item>
+            <item>
+              <description>Guarda la versión restaurada en el servidor como una nueva versión del documento, realizar la versión más reciente de la versión restaurada.</description>
+            </item>
+          </list>
+          <para>El método <b>Restore</b> genera un error en tiempo de ejecución si el documento activo tiene cambios que no se han guardado.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

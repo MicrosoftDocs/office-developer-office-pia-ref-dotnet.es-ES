@@ -1,0 +1,248 @@
+<Type Name="DocumentProperties" FullName="Microsoft.Office.Core.DocumentProperties">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="eb1823ca0268f88c93f5386e69810ede55a18de1" />
+    <Meta Name="ms.sourcegitcommit" Value="f41bc3cdd2c00b9a51a4340ac823a9e309633924" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="es-ES" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20663333" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface DocumentProperties : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DocumentProperties implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Core.DocumentProperties" />
+  <TypeSignature Language="VB.NET" Value="Public Interface DocumentProperties&#xA;Implements IEnumerable" />
+  <TypeSignature Language="C++ CLI" Value="public interface class DocumentProperties : System::Collections::IEnumerable" />
+  <AssemblyInfo>
+    <AssemblyName>office</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("2DF8D04D-5BFA-101B-BDE5-00AA0044DE52")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4096)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Una colección de <see cref="T:Microsoft.Office.Core.DocumentProperty" /> objetos.</summary>
+    <remarks>
+      <para>Cada objeto <b>DocumentProperty</b> representa una propiedad integrada o personalizada de un documento contenedor.</para> Uso de 
+      <para>el <see cref="M:Microsoft.Office.Core.DocumentProperties.Add(System.String,System.Boolean,System.Object,System.Object,System.Object)" /> (método) para crear una nueva propiedad personalizada y agregarla a la colección <b>DocumentProperties</b> . No se puede usar el método <b>Add</b> para crear una propiedad de documento integrada.</para><para>Uso <b>BuiltinDocumentProperties</b>(<paramref name="index" />), donde <paramref name="index" /> es el número de índice de la propiedad de documento integrada, para devolver un único objeto <b>DocumentProperty</b> que representa una propiedad de documento integrada específica. Utilice <b>CustomDocumentProperties</b>(<paramref name="index" />), donde <paramref name="index" /> es el número de la propiedad de documento personalizada, para devolver un objeto <b>DocumentProperty</b> que representa una propiedad de documento personalizada específica.</para><para /></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.DocumentProperty Add (string Name, bool LinkToContent, object Type, object Value, object LinkSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Core.DocumentProperty Add([in]string Name, [in]bool LinkToContent, [in]object Type, [in]object Value, [in]object LinkSource) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.DocumentProperties.Add(System.String,System.Boolean,System.Object,System.Object,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Add (Name As String, LinkToContent As Boolean, Optional Type As Object, Optional Value As Object, Optional LinkSource As Object) As DocumentProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.LCIDConversion(5)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.DocumentProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Name" Type="System.String" />
+        <Parameter Name="LinkToContent" Type="System.Boolean" />
+        <Parameter Name="Type" Type="System.Object" />
+        <Parameter Name="Value" Type="System.Object" />
+        <Parameter Name="LinkSource" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Name">
+          <b>String</b> requerida. El nombre de la propiedad.</param>
+        <param name="LinkToContent">Requerido de <b>tipo Boolean</b>. Especifica si la propiedad está vinculada al contenido del documento contenedor. Si este argumento es <b>True</b>, el <paramref name="LinkSource" /> se requiere argumento; Si es <b>False</b>, se requiere el argumento de valor.</param>
+        <param name="Type">
+          <b>Objeto</b>de opcional. El tipo de datos de la propiedad. Puede ser uno de los siguientes <see cref="T:Microsoft.Office.Core.MsoDocProperties" /> constantes: <b>msoPropertyTypeBoolean</b>, <b>msoPropertyTypeDate</b>, <b>msoPropertyTypeFloat</b>, <b>msoPropertyTypeNumber</b>o <b>msoPropertyTypeString</b>.</param>
+        <param name="Value">
+          <b>Objeto</b>de opcional. El valor de la propiedad, si no está vinculada al contenido del documento contenedor. El valor se convierte para que coincida con el tipo de datos especificado por el argumento de tipo. Si no se puede convertir, se produce un error. Si <paramref name="LinkToContent" /> es <b>True</b>, el <paramref name="Value" /> se omite el argumento y la nueva propiedad de documento se asigna un valor predeterminado hasta que la aplicación contenedora actualice los valores de propiedad vinculado (normalmente cuando se guarda el documento).</param>
+        <param name="LinkSource">
+          <b>Objeto</b>de opcional. Por alto si <paramref name="LinkToContent" /> es <b>False</b>. El origen de la propiedad vinculada. La aplicación contenedora determina qué tipos de origen de vinculación puede utilizar.</param>
+        <summary>Crea una nueva propiedad de documento personalizada.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>Si agrega una propiedad de documento personalizada a la <see cref="T:Microsoft.Office.Core.DocumentProperties" /> colección que está vinculado a un valor determinado en un documento de Microsoft Office, debe guardar el documento para ver el cambio en el <see cref="T:Microsoft.Office.Core.DocumentProperty" /> objeto.</para>
+          <para>Sólo puede agregar una nueva propiedad de documento a la colección <b>DocumentProperties</b> personalizada.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public object Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentProperties.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Application { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743813)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un objeto <b>Application</b> que representa la aplicación contenedora para el objeto.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentProperties.Count" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(4)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un <b>entero</b> que indica el número de elementos de la colección especificada.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentProperties.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743814)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un entero de 32 bits que indica la aplicación en la que se creó el objeto especificado.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Si el objeto especificado se creó en Microsoft Word, esta propiedad devuelve 1297307460, que representa la cadena MSWD; Si se creó en Microsoft Excel, esta propiedad devuelve 1480803660. Este valor también puede representarse mediante la constante <b>wdCreatorCode</b> en Word o <b>xlCreatorCode</b> en Excel.</para> Propiedad 
+          <para>el <b>creador</b> principalmente se diseñó para usarse en Macintosh, donde cada aplicación tiene un código de creador de cuatro caracteres. Por ejemplo, Microsoft Word tiene el código de creador MSWD. Para obtener información adicional acerca de esta propiedad, vea la referencia del lenguaje ayuda que se incluye con Microsoft Office Macintosh Edition.</para><para>El <b>creador</b> de la propiedad devuelve siempre el identificador numérico de la aplicación activa, al igual que el <see cref="P:Microsoft.Office.Core.DocumentProperties.Application" /> propiedad siempre devuelve el nombre de la aplicación activa en forma de cadena. Utilice la propiedad <b>CreatedBy</b> de la <see cref="T:Microsoft.Office.Core.SharedWorkspaceFile" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceFolder" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceLink" />, y <see cref="T:Microsoft.Office.Core.SharedWorkspaceTask" /> objetos para devolver el nombre de la persona que creó dichos objetos. Utilice las propiedades de documento para devolver información acerca de los autores de los documentos de Office.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.DocumentProperties.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.TypeLibFunc(1024)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.DocumentProperty this[object Index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Core.DocumentProperty Item(object)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentProperties.Item(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(Index As Object) As DocumentProperty" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::DocumentProperty ^ default[System::Object ^] { Microsoft::Office::Core::DocumentProperty ^ get(System::Object ^ Index); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.LCIDConversion(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.DocumentProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Index">
+          <b>Objeto</b>requerido. Nombre o número de índice de la propiedad de documento que se va a devolver.</param>
+        <summary>Devuelve un <see cref="T:Microsoft.Office.Core.DocumentProperty" /> objeto desde el <see cref="T:Microsoft.Office.Core.DocumentProperties" /> colección.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.DocumentProperties.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el objeto <b>primario</b> del objeto especificado.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

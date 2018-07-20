@@ -1,0 +1,200 @@
+<Type Name="SharedWorkspaceFolder" FullName="Microsoft.Office.Core.SharedWorkspaceFolder">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="d96b9563205414a1d155a18f3221479d4d67deb3" />
+    <Meta Name="ms.sourcegitcommit" Value="f41bc3cdd2c00b9a51a4340ac823a9e309633924" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="es-ES" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20662772" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface SharedWorkspaceFolder : Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SharedWorkspaceFolder implements class Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Core.SharedWorkspaceFolder" />
+  <TypeSignature Language="VB.NET" Value="Public Interface SharedWorkspaceFolder&#xA;Implements _IMsoDispObj" />
+  <TypeSignature Language="C++ CLI" Value="public interface class SharedWorkspaceFolder : Microsoft::Office::Core::_IMsoDispObj" />
+  <AssemblyInfo>
+    <AssemblyName>office</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Core._IMsoDispObj</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("000C037D-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4288)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Este objeto, miembro o enumeración está desusada y no está pensada para usarse en el código. El objeto <b>SharedWorkspaceFolder</b> representa una carpeta en un área de documentos compartida.</summary>
+    <remarks>
+      <para>Este objeto es un miembro de la <see cref="T:Microsoft.Office.Core.SharedWorkspaceFolders" /> colección.</para>
+      <para>Utilice el objeto <b>SharedWorkspaceFolder</b> para administrar subcarpetas dentro de la carpeta de biblioteca de documentos principal de un área de trabajo compartida.</para>
+      <para>El <see cref="P:Microsoft.Office.Core.SharedWorkspaceFolders.Count" /> (propiedad) de la colección <b>SharedWorkspaceFolders</b> no incluye la carpeta principal del área de trabajo y devuelve 0 (cero) si no se han creado subcarpetas.</para>
+      <para>El objeto <b>SharedWorkspaceFolder</b> no expone las propiedades <b>CreatedBy</b>, <b>CreatedDate</b>, <b>ModifiedBy</b>y <b>ModifiedDate</b> disponibles en el <see cref="T:Microsoft.Office.Core.SharedWorkspaceFile" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceLink" />, y <see cref="T:Microsoft.Office.Core.SharedWorkspaceTask" /> objetos.</para>
+      <para>Usar el <b>elemento</b>(<paramref name="index" />) método de la colección <b>SharedWorkspaceFolders</b> para devolver un objeto <b>SharedWorkspaceFolder</b> específico.</para>
+      <para>Usar el <see cref="P:Microsoft.Office.Core.SharedWorkspaceFolder.FolderName" /> (propiedad) para devolver el nombre de la carpeta del área de trabajo compartida.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public object Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspaceFolder.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Application { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Application</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un objeto <b>Application</b> que representa la aplicación contenedora para el objeto.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspaceFolder.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Creator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un entero de 32 bits que indica la aplicación en la que se creó el objeto especificado.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Si el objeto especificado se creó en Microsoft Word, esta propiedad devuelve 1297307460, que representa la cadena MSWD; Si se creó en Microsoft Excel, esta propiedad devuelve 1480803660. Este valor también puede representarse mediante la constante <b>wdCreatorCode</b> en Word o <b>xlCreatorCode</b> en Excel.</para> Propiedad 
+          <para>el <b>creador</b> principalmente se diseñó para usarse en Macintosh, donde cada aplicación tiene un código de creador de cuatro caracteres. Por ejemplo, Microsoft Word tiene el código de creador MSWD. Para obtener información adicional acerca de esta propiedad, vea la referencia del lenguaje ayuda que se incluye con Microsoft Office Macintosh Edition.</para><para>El <b>creador</b> de la propiedad devuelve siempre el identificador numérico de la aplicación activa, al igual que el <see cref="P:Microsoft.Office.Core.SharedWorkspaceFolder.Application" /> propiedad siempre devuelve el nombre de la aplicación activa en forma de cadena. Utilice la propiedad <b>CreatedBy</b> de la <see cref="T:Microsoft.Office.Core.SharedWorkspaceFile" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceFolder" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceLink" />, y <see cref="T:Microsoft.Office.Core.SharedWorkspaceTask" /> objetos para devolver el nombre de la persona que creó dichos objetos. Utilice las propiedades de documento para devolver información acerca de los autores de los documentos de Office.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete (object DeleteEventIfFolderContainsFiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete([in]object DeleteEventIfFolderContainsFiles) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SharedWorkspaceFolder.Delete(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Delete (Optional DeleteEventIfFolderContainsFiles As Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="DeleteEventIfFolderContainsFiles" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="DeleteEventIfFolderContainsFiles">
+          <b>Boolean</b> opcional.  <b>True</b> para eliminar la carpeta sin advertencia incluso si la carpeta contiene los archivos. Valor predeterminado es <b>False</b>.</param>
+        <summary>Elimina la carpeta del área de trabajo compartida actual y todos los datos que contenga.</summary>
+        <remarks>
+          <para>Este método se producirá un error si el usuario no tiene permiso para eliminar la carpeta actual del área de trabajo compartida.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FolderName">
+      <MemberSignature Language="C#" Value="public string this { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FolderName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspaceFolder.FolderName" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property FolderName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el nombre de una subcarpeta dentro de la carpeta de biblioteca de documentos principal de un área de trabajo compartida.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>La propiedad <b>FolderName</b> devuelve el nombre de la subcarpeta en el formato parentfolder/subcarpeta. Por ejemplo, si el área de trabajo compartida contiene una carpeta denominada "Documentos auxiliares", la propiedad <b>FolderName</b> devuelve documentos Documents/Supporting compartidos.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspaceFolder.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el objeto <b>primario</b> del objeto especificado.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

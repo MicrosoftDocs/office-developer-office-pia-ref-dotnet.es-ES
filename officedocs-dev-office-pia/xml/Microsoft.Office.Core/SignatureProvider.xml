@@ -1,0 +1,403 @@
+<Type Name="SignatureProvider" FullName="Microsoft.Office.Core.SignatureProvider">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="f75e580a44e443c0cdc1870bf2d4671939974dc2" />
+    <Meta Name="ms.sourcegitcommit" Value="f41bc3cdd2c00b9a51a4340ac823a9e309633924" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="es-ES" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20663556" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface SignatureProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SignatureProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Core.SignatureProvider" />
+  <TypeSignature Language="VB.NET" Value="Public Interface SignatureProvider" />
+  <TypeSignature Language="C++ CLI" Value="public interface class SignatureProvider" />
+  <AssemblyInfo>
+    <AssemblyName>office</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("000CD6A3-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4160)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa un complemento de proveedor de firma.</summary>
+    <remarks>
+      <para>
+        <b>Nota</b>: los proveedores de firma se implementan exclusivamente en complementos COM personalizados y no se pueden implementar en Microsoft Visual Basic para aplicaciones (VBA).</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GenerateSignatureLineImage">
+      <MemberSignature Language="C#" Value="public stdole.IPictureDisp GenerateSignatureLineImage (Microsoft.Office.Core.SignatureLineImage siglnimg, Microsoft.Office.Core.SignatureSetup psigsetup, Microsoft.Office.Core.SignatureInfo psiginfo, object XmlDsigStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class stdole.IPictureDisp GenerateSignatureLineImage([in]valuetype Microsoft.Office.Core.SignatureLineImage siglnimg, [in]class Microsoft.Office.Core.SignatureSetup psigsetup, [in]class Microsoft.Office.Core.SignatureInfo psiginfo, [in]object XmlDsigStream) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SignatureProvider.GenerateSignatureLineImage(Microsoft.Office.Core.SignatureLineImage,Microsoft.Office.Core.SignatureSetup,Microsoft.Office.Core.SignatureInfo,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GenerateSignatureLineImage (siglnimg As SignatureLineImage, psigsetup As SignatureSetup, psiginfo As SignatureInfo, XmlDsigStream As Object) As IPictureDisp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; stdole::IPictureDisp ^ GenerateSignatureLineImage(Microsoft::Office::Core::SignatureLineImage siglnimg, Microsoft::Office::Core::SignatureSetup ^ psigsetup, Microsoft::Office::Core::SignatureInfo ^ psiginfo, System::Object ^ XmlDsigStream);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>stdole.IPictureDisp</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName>System.Runtime.InteropServices.ComAliasName("stdole.IPictureDisp")</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siglnimg" Type="Microsoft.Office.Core.SignatureLineImage" />
+        <Parameter Name="psigsetup" Type="Microsoft.Office.Core.SignatureSetup" />
+        <Parameter Name="psiginfo" Type="Microsoft.Office.Core.SignatureInfo" />
+        <Parameter Name="XmlDsigStream" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="siglnimg">Contiene el nombre del gráfico de línea de firma.</param>
+        <param name="psigsetup">Especifica las configuraciones iniciales del complemento proveedor de firma.</param>
+        <param name="psiginfo">Especifica información acerca del complemento proveedor de firma.</param>
+        <param name="XmlDsigStream">To be added.</param>
+        <summary>Obtiene una imagen de línea de firma.</summary>
+        <returns>
+          <b>IPictureDisp</b>
+        </returns>
+        <remarks>
+          <para>El <see cref="T:Microsoft.Office.Core.SignatureProvider" /> objeto se utiliza exclusivamente en complementos de proveedor de firma personalizado. Se llama a este método para cada una de las imágenes que se muestra en el contenido del documento. Puede llamarse al método de forma asincrónica. Por ejemplo, es posible que llama al método para la imagen "Sin firmar" y la imagen "Sin software" directamente después de la configuración de firma. A continuación, se puede llamar al método después de la firma para la imagen "Firmado". Las cuatro imágenes utilizadas son: </para>
+          <list type="bullet">
+            <item>
+              <para>
+                <see cref="F:Microsoft.Office.Core.SignatureLineImage.siglnimgSoftwareRequired" />: esta imagen se muestra al usuario si el complemento de proveedor de firma no está instalado en el equipo del usuario. Si el usuario intenta firmar o ver una línea de firma, se les redirige a un hipervínculo proporcionados por el proveedor especificado en el <see cref="M:Microsoft.Office.Core.SignatureProvider.GetProviderDetail(Microsoft.Office.Core.SignatureProviderDetail)" /> método.</para>
+            </item>
+            <item>
+              <para>
+                <see cref="F:Microsoft.Office.Core.SignatureLineImage.siglnimgUnsigned" />: Esta imagen se muestra para una imagen de firma sin firmar. Básicamente, cuando se carga un documento con una línea de firma sin firmar, el proveedor de firmas solicita una imagen de firma actualizada y muestra esta imagen.</para>
+            </item>
+            <item>
+              <para>
+                <see cref="F:Microsoft.Office.Core.SignatureLineImage.siglnimgSignedValid" />: Ésta es la imagen que se muestra cuando una línea de firma está firmado y es válido (o, para ser más específicos, firma y la firma no se registra como no válida). Cuando se abre el documento, se supone que todas las firmas firmadas son válidas hasta que el proceso de comprobación se complete, momento en el que se muestra una imagen "Firmado/no válido" para las firmas no válidas. Debido a que la comprobación de la firma es mucho tiempo, la comprobación de la firma se ejecuta en paralelo con Office en un subproceso de fondo. Debido a que el complemento implementa la verificación de la firma, el código se ejecuta en paralelo con Office y no debe intentar mostrar la interfaz de usuario durante la firma o la verificación.</para>
+            </item>
+            <item>
+              <para>
+                <see cref="F:Microsoft.Office.Core.SignatureLineImage.siglnimgSignedInvalid" />: Se trata de la imagen que se muestra cuando una línea de firma está firmada pero hay un problema con la firma, como el documento se ha modificado o se ha revocado el certificado del usuario. Debido a que el complemento implementa la verificación de la firma, puede decidir cómo y cuándo una firma no es válida.</para>
+            </item>
+          </list>
+          <para />
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderDetail">
+      <MemberSignature Language="C#" Value="public object GetProviderDetail (Microsoft.Office.Core.SignatureProviderDetail sigprovdet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetProviderDetail([in]valuetype Microsoft.Office.Core.SignatureProviderDetail sigprovdet) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SignatureProvider.GetProviderDetail(Microsoft.Office.Core.SignatureProviderDetail)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetProviderDetail (sigprovdet As SignatureProviderDetail) As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ GetProviderDetail(Microsoft::Office::Core::SignatureProviderDetail sigprovdet);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743815)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sigprovdet" Type="Microsoft.Office.Core.SignatureProviderDetail" />
+      </Parameters>
+      <Docs>
+        <param name="sigprovdet">Contiene un valor enumerado que representa el tipo de información para consultar el complemento.</param>
+        <summary>Consulta diversos detalles en el complemento del proveedor de firma.</summary>
+        <returns>
+          <b>Object</b>
+        </returns>
+        <remarks>
+          <para>El <see cref="T:Microsoft.Office.Core.SignatureProvider" /> objeto se utiliza exclusivamente en complementos de proveedor de firma personalizado. Este método se usa para consultar el complemento para tres partes de la información:</para>
+          <list type="bullet">
+            <item>
+              <para>qué algoritmo de hash hace la compatibilidad?</para>
+            </item>
+            <item>
+              <para>Es el complemento sólo una interfaz de usuario (UI) o admite operaciones hash y comprobación? Si se devuelve <b>True</b> , Microsoft Office no llama el complemento para hash o para comprobar, sólo para mostrar la interfaz de usuario.</para>
+            </item>
+            <item>
+              <para>¿Qué dirección URL debería agregar en proporcionar a los usuarios si no tienen el complemento de firma?</para>
+            </item>
+          </list>
+          <para />
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashStream">
+      <MemberSignature Language="C#" Value="public Array HashStream (object QueryContinue, object Stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Array HashStream([in]object QueryContinue, [in]object Stream) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SignatureProvider.HashStream(System.Object,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function HashStream (QueryContinue As Object, Stream As Object) As Array" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Array ^ HashStream(System::Object ^ QueryContinue, System::Object ^ Stream);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743816)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Array</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="QueryContinue" Type="System.Object" />
+        <Parameter Name="Stream" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="QueryContinue">Proporciona una forma de consultar a la aplicación host para obtener permisos para continuar el proceso hash.</param>
+        <param name="Stream">Contiene la secuencia de datos.</param>
+        <summary>Permite a un complemento de proveedor de firmas crear un valor hash para el documento que se puede utilizar para determinar si el contenido del documento se ha alterado después de la firma digital.</summary>
+        <returns>
+          <b>Array</b>
+        </returns>
+        <remarks>
+          <para>El <see cref="T:Microsoft.Office.Core.SignatureProvider" /> objeto se utiliza exclusivamente en complementos de proveedor de firma personalizado. Este método se llama una vez por secuencia de datos de firma en un documento. El valor devuelto es una matriz de bytes que representa el valor hash calculado mediante el algoritmo de hash.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifySignatureAdded">
+      <MemberSignature Language="C#" Value="public void NotifySignatureAdded (object ParentWindow, Microsoft.Office.Core.SignatureSetup psigsetup, Microsoft.Office.Core.SignatureInfo psiginfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void NotifySignatureAdded([in]object ParentWindow, [in]class Microsoft.Office.Core.SignatureSetup psigsetup, [in]class Microsoft.Office.Core.SignatureInfo psiginfo) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SignatureProvider.NotifySignatureAdded(System.Object,Microsoft.Office.Core.SignatureSetup,Microsoft.Office.Core.SignatureInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub NotifySignatureAdded (ParentWindow As Object, psigsetup As SignatureSetup, psiginfo As SignatureInfo)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void NotifySignatureAdded(System::Object ^ ParentWindow, Microsoft::Office::Core::SignatureSetup ^ psigsetup, Microsoft::Office::Core::SignatureInfo ^ psiginfo);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743812)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ParentWindow" Type="System.Object" />
+        <Parameter Name="psigsetup" Type="Microsoft.Office.Core.SignatureSetup" />
+        <Parameter Name="psiginfo" Type="Microsoft.Office.Core.SignatureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="ParentWindow">Permite a la aplicación host obtener el controlador a la ventana que contiene el cuadro de diálogo mostrado.</param>
+        <param name="psigsetup">Contiene las configuraciones iniciales del proveedor de firma.</param>
+        <param name="psiginfo">Contiene información acerca del complemento de proveedor de firmas.</param>
+        <summary>Se utiliza para mostrar un cuadro de diálogo que informa al usuario de que el proceso de firma se ha completado y proporcionar funcionalidad adicional para el complemento.</summary>
+        <remarks>
+          <para>Se llama a este método cuando haya finalizado el proceso de firma. Permite a un complemento de proveedor de firmas la capacidad de agregar funcionalidad adicional para el complemento. Por ejemplo, si desea ofrecer un servicio de archivo donde un usuario puede cargar su documento firmado, podría utilizar este método para iniciar dicho proceso.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowSignatureDetails">
+      <MemberSignature Language="C#" Value="public void ShowSignatureDetails (object ParentWindow, Microsoft.Office.Core.SignatureSetup psigsetup, Microsoft.Office.Core.SignatureInfo psiginfo, object XmlDsigStream, out Microsoft.Office.Core.ContentVerificationResults pcontverres, out Microsoft.Office.Core.CertificateVerificationResults pcertverres);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowSignatureDetails([in]object ParentWindow, [in]class Microsoft.Office.Core.SignatureSetup psigsetup, [in]class Microsoft.Office.Core.SignatureInfo psiginfo, [in]object XmlDsigStream, [out] valuetype Microsoft.Office.Core.ContentVerificationResults&amp; pcontverres, [out] valuetype Microsoft.Office.Core.CertificateVerificationResults&amp; pcertverres) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SignatureProvider.ShowSignatureDetails(System.Object,Microsoft.Office.Core.SignatureSetup,Microsoft.Office.Core.SignatureInfo,System.Object,Microsoft.Office.Core.ContentVerificationResults@,Microsoft.Office.Core.CertificateVerificationResults@)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ShowSignatureDetails (ParentWindow As Object, psigsetup As SignatureSetup, psiginfo As SignatureInfo, XmlDsigStream As Object, ByRef pcontverres As ContentVerificationResults, ByRef pcertverres As CertificateVerificationResults)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ShowSignatureDetails(System::Object ^ ParentWindow, Microsoft::Office::Core::SignatureSetup ^ psigsetup, Microsoft::Office::Core::SignatureInfo ^ psiginfo, System::Object ^ XmlDsigStream, [Runtime::InteropServices::Out] Microsoft::Office::Core::ContentVerificationResults % pcontverres, [Runtime::InteropServices::Out] Microsoft::Office::Core::CertificateVerificationResults % pcertverres);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743814)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ParentWindow" Type="System.Object" />
+        <Parameter Name="psigsetup" Type="Microsoft.Office.Core.SignatureSetup" />
+        <Parameter Name="psiginfo" Type="Microsoft.Office.Core.SignatureInfo" />
+        <Parameter Name="XmlDsigStream" Type="System.Object" />
+        <Parameter Name="pcontverres" Type="Microsoft.Office.Core.ContentVerificationResults&amp;" RefType="out" />
+        <Parameter Name="pcertverres" Type="Microsoft.Office.Core.CertificateVerificationResults&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ParentWindow">Contiene el controlador de la ventana que contiene los detalles de firma.</param>
+        <param name="psigsetup">Especifica las configuraciones iniciales del proveedor de firma.</param>
+        <param name="psiginfo">Especifica información acerca de la línea de firma firmada.</param>
+        <param name="XmlDsigStream">Representa una secuencia de datos o un objeto binario grande de XML.</param>
+        <param name="pcontverres">Contiene un valor que representa los resultados de comprobación del contenido de firma.</param>
+        <param name="pcertverres">Contiene un valor que representa los resultados de comprobación de la certificación de firma.</param>
+        <summary>Proporciona un complemento de proveedor de firmas la oportunidad de mostrar detalles acerca de una línea de firma firmada y mostrar información adicional almacenada como una marca de hora segura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowSignatureSetup">
+      <MemberSignature Language="C#" Value="public void ShowSignatureSetup (object ParentWindow, Microsoft.Office.Core.SignatureSetup psigsetup);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowSignatureSetup([in]object ParentWindow, [in]class Microsoft.Office.Core.SignatureSetup psigsetup) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SignatureProvider.ShowSignatureSetup(System.Object,Microsoft.Office.Core.SignatureSetup)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ShowSignatureSetup (ParentWindow As Object, psigsetup As SignatureSetup)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ShowSignatureSetup(System::Object ^ ParentWindow, Microsoft::Office::Core::SignatureSetup ^ psigsetup);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ParentWindow" Type="System.Object" />
+        <Parameter Name="psigsetup" Type="Microsoft.Office.Core.SignatureSetup" />
+      </Parameters>
+      <Docs>
+        <param name="ParentWindow">Contiene un controlador de la ventana que contiene el cuadro de diálogo Configuración de firma.</param>
+        <param name="psigsetup">Especifica las configuraciones iniciales del proveedor de firma.</param>
+        <summary>Ofrece a un complemento de proveedor de firmas la oportunidad de mostrar el cuadro de diálogo Configuración de firma al usuario.</summary>
+        <remarks>
+          <para>Este método se usa para ambos el proceso de configuración de tiempo de inserción y si un usuario más adelante desea volver a configurar la línea de firma. Mostrar el cuadro de diálogo Configuración de firma durante esta devolución de llamada y espere a que el usuario seleccione Aceptar o Cancelar. No es necesario mostrar un cuadro de diálogo de configuración de firma a menos que necesite específicamente información del autor acerca de la línea de firma. Si puede proporcionar todos los detalles necesarios a Microsoft Office sin entrada del usuario, a continuación, no es necesario ningún cuadro de diálogo.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowSigningCeremony">
+      <MemberSignature Language="C#" Value="public void ShowSigningCeremony (object ParentWindow, Microsoft.Office.Core.SignatureSetup psigsetup, Microsoft.Office.Core.SignatureInfo psiginfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowSigningCeremony([in]object ParentWindow, [in]class Microsoft.Office.Core.SignatureSetup psigsetup, [in]class Microsoft.Office.Core.SignatureInfo psiginfo) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SignatureProvider.ShowSigningCeremony(System.Object,Microsoft.Office.Core.SignatureSetup,Microsoft.Office.Core.SignatureInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ShowSigningCeremony (ParentWindow As Object, psigsetup As SignatureSetup, psiginfo As SignatureInfo)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ShowSigningCeremony(System::Object ^ ParentWindow, Microsoft::Office::Core::SignatureSetup ^ psigsetup, Microsoft::Office::Core::SignatureInfo ^ psiginfo);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743810)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ParentWindow" Type="System.Object" />
+        <Parameter Name="psigsetup" Type="Microsoft.Office.Core.SignatureSetup" />
+        <Parameter Name="psiginfo" Type="Microsoft.Office.Core.SignatureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="ParentWindow">Contiene un controlador de la ventana que contiene el cuadro de diálogo Firma.</param>
+        <param name="psigsetup">Especifica las configuraciones iniciales del proveedor de firma.</param>
+        <param name="psiginfo">Especifica información acerca del proveedor de firma.</param>
+        <summary>Proporciona a un complemento de proveedor de firmas la oportunidad de mostrar el cuadro de diálogo Firma a los usuarios, permitiéndoles especificar su identidad y a continuación ser autenticados.</summary>
+        <remarks>
+          <para>Este método es llamado internamente por la aplicación de Microsoft Office cuando el usuario intenta firmar una línea de firma, o si el complemento ha llamado el <see cref="M:Microsoft.Office.Core.Signature.Sign(System.Object,System.Object,System.Object,System.Object)" /> (método) en el modelo de objetos de la aplicación de Office en un <see cref="T:Microsoft.Office.Core.Signature" /> objeto.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignXmlDsig">
+      <MemberSignature Language="C#" Value="public void SignXmlDsig (object QueryContinue, Microsoft.Office.Core.SignatureSetup psigsetup, Microsoft.Office.Core.SignatureInfo psiginfo, object XmlDsigStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SignXmlDsig([in]object QueryContinue, [in]class Microsoft.Office.Core.SignatureSetup psigsetup, [in]class Microsoft.Office.Core.SignatureInfo psiginfo, [in]object XmlDsigStream) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SignatureProvider.SignXmlDsig(System.Object,Microsoft.Office.Core.SignatureSetup,Microsoft.Office.Core.SignatureInfo,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SignXmlDsig (QueryContinue As Object, psigsetup As SignatureSetup, psiginfo As SignatureInfo, XmlDsigStream As Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SignXmlDsig(System::Object ^ QueryContinue, Microsoft::Office::Core::SignatureSetup ^ psigsetup, Microsoft::Office::Core::SignatureInfo ^ psiginfo, System::Object ^ XmlDsigStream);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743811)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="QueryContinue" Type="System.Object" />
+        <Parameter Name="psigsetup" Type="Microsoft.Office.Core.SignatureSetup" />
+        <Parameter Name="psiginfo" Type="Microsoft.Office.Core.SignatureInfo" />
+        <Parameter Name="XmlDsigStream" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="QueryContinue">Proporciona una forma de consultar a la aplicación host para obtener permisos para continuar la operación de comprobación.</param>
+        <param name="psigsetup">Especifica información de configuración acerca de la línea de firma.</param>
+        <param name="psiginfo">Especifica información capturada en la ceremonia de firma.</param>
+        <param name="XmlDsigStream">Representa una secuencia de datos que contiene XML, que representa un objeto <b>XMLDSIG</b>.</param>
+        <summary>Se utiliza para firmar la plantilla XMLDSIG.</summary>
+        <remarks>
+          <para>XMLDSIG es un formato de firma basada en estándares<a href="http://www.w3.org/TR/xmldsig-core/">http://www.w3.org/TR/xmldsig-core/</a></para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyXmlDsig">
+      <MemberSignature Language="C#" Value="public void VerifyXmlDsig (object QueryContinue, Microsoft.Office.Core.SignatureSetup psigsetup, Microsoft.Office.Core.SignatureInfo psiginfo, object XmlDsigStream, out Microsoft.Office.Core.ContentVerificationResults pcontverres, out Microsoft.Office.Core.CertificateVerificationResults pcertverres);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void VerifyXmlDsig([in]object QueryContinue, [in]class Microsoft.Office.Core.SignatureSetup psigsetup, [in]class Microsoft.Office.Core.SignatureInfo psiginfo, [in]object XmlDsigStream, [out] valuetype Microsoft.Office.Core.ContentVerificationResults&amp; pcontverres, [out] valuetype Microsoft.Office.Core.CertificateVerificationResults&amp; pcertverres) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SignatureProvider.VerifyXmlDsig(System.Object,Microsoft.Office.Core.SignatureSetup,Microsoft.Office.Core.SignatureInfo,System.Object,Microsoft.Office.Core.ContentVerificationResults@,Microsoft.Office.Core.CertificateVerificationResults@)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub VerifyXmlDsig (QueryContinue As Object, psigsetup As SignatureSetup, psiginfo As SignatureInfo, XmlDsigStream As Object, ByRef pcontverres As ContentVerificationResults, ByRef pcertverres As CertificateVerificationResults)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void VerifyXmlDsig(System::Object ^ QueryContinue, Microsoft::Office::Core::SignatureSetup ^ psigsetup, Microsoft::Office::Core::SignatureInfo ^ psiginfo, System::Object ^ XmlDsigStream, [Runtime::InteropServices::Out] Microsoft::Office::Core::ContentVerificationResults % pcontverres, [Runtime::InteropServices::Out] Microsoft::Office::Core::CertificateVerificationResults % pcertverres);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743813)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="QueryContinue" Type="System.Object" />
+        <Parameter Name="psigsetup" Type="Microsoft.Office.Core.SignatureSetup" />
+        <Parameter Name="psiginfo" Type="Microsoft.Office.Core.SignatureInfo" />
+        <Parameter Name="XmlDsigStream" Type="System.Object" />
+        <Parameter Name="pcontverres" Type="Microsoft.Office.Core.ContentVerificationResults&amp;" RefType="out" />
+        <Parameter Name="pcertverres" Type="Microsoft.Office.Core.CertificateVerificationResults&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="QueryContinue">Proporciona una forma de consultar a la aplicación host para obtener permisos para continuar la operación de comprobación.</param>
+        <param name="psigsetup">Especifica información de configuración acerca de la línea de firma.</param>
+        <param name="psiginfo">Especifica información capturada en la ceremonia de firma.</param>
+        <param name="XmlDsigStream">Representa una secuencia de datos que contiene XML, que representa un objeto <b>XMLDSIG</b>.</param>
+        <param name="pcontverres">Especifica el estado de la acción de comprobación de firma.</param>
+        <param name="pcertverres">Especifica el estado de la comprobación del certificado de firma.</param>
+        <summary>Comprueba una firma basada en el estado firmado del documento y en la legitimidad del certificado utilizado para firmar.</summary>
+        <remarks>
+          <para>XMLDSIG es un (formato de firma basada en estándares<a href="http://www.w3.org/TR/xmldsig-core/">http://www.w3.org/TR/xmldsig-core/</a></para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

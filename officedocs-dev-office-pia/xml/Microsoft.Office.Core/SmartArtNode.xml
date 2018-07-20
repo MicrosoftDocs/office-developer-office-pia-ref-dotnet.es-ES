@@ -1,0 +1,693 @@
+<Type Name="SmartArtNode" FullName="Microsoft.Office.Core.SmartArtNode">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="4a10f538dc53dcbd7190b050e96ba06931c977fc" />
+    <Meta Name="ms.sourcegitcommit" Value="f41bc3cdd2c00b9a51a4340ac823a9e309633924" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="es-ES" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20663193" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface SmartArtNode : Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SmartArtNode implements class Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Core.SmartArtNode" />
+  <TypeSignature Language="VB.NET" Value="Public Interface SmartArtNode&#xA;Implements _IMsoDispObj" />
+  <TypeSignature Language="C++ CLI" Value="public interface class SmartArtNode : Microsoft::Office::Core::_IMsoDispObj" />
+  <AssemblyInfo>
+    <AssemblyName>office</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Core._IMsoDispObj</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("000C03C8-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4288)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Un único nodo semántico dentro del modelo de datos de un gráfico SmartArt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddNode">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.SmartArtNode AddNode (Microsoft.Office.Core.MsoSmartArtNodePosition Position = Microsoft.Office.Core.MsoSmartArtNodePosition.msoSmartArtNodeDefault, Microsoft.Office.Core.MsoSmartArtNodeType Type = Microsoft.Office.Core.MsoSmartArtNodeType.msoSmartArtNodeTypeDefault);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Core.SmartArtNode AddNode([in]valuetype Microsoft.Office.Core.MsoSmartArtNodePosition Position, [in]valuetype Microsoft.Office.Core.MsoSmartArtNodeType Type) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SmartArtNode.AddNode(Microsoft.Office.Core.MsoSmartArtNodePosition,Microsoft.Office.Core.MsoSmartArtNodeType)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddNode (Optional Position As MsoSmartArtNodePosition = Microsoft.Office.Core.MsoSmartArtNodePosition.msoSmartArtNodeDefault, Optional Type As MsoSmartArtNodeType = Microsoft.Office.Core.MsoSmartArtNodeType.msoSmartArtNodeTypeDefault) As SmartArtNode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.SmartArtNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Position" Type="Microsoft.Office.Core.MsoSmartArtNodePosition" />
+        <Parameter Name="Type" Type="Microsoft.Office.Core.MsoSmartArtNodeType" />
+      </Parameters>
+      <Docs>
+        <param name="Position">Especifica la ubicación de la <b>SmartArtNode</b> en el modelo de datos. Por ejemplo, <see cref="F:Microsoft.Office.Core.MsoSmartArtNodePosition.msoSmartArtNodeAbove" /> o <see cref="F:Microsoft.Office.Core.MsoSmartArtNodePosition.msoSmartArtNodeAfter" />.</param>
+        <param name="Type">Especifica el tipo de la se ha agregado un <b>SmartArtNode</b>. Por ejemplo, <see cref="F:Microsoft.Office.Core.MsoSmartArtNodeType.msoSmartArtNodeTypeAssistant" /> o <see cref="F:Microsoft.Office.Core.MsoSmartArtNodeType.msoSmartArtNodeTypeDefault" />.</param>
+        <summary>Agrega un nuevo nodo SmartArt al modelo de datos de la manera especificada por el <paramref name="Position" /> valor, y <paramref name="Type" />.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public object Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SmartArtNode.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Application { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Application</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtiene un objeto <b>Application</b> que representa la aplicación contenedora del objeto <b>SmartArtNode</b>.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Es de sólo lectura.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SmartArtNode.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Creator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtiene un entero de 32 bits que indica la aplicación en la que se creó el objeto <b>SmartArtNode</b>.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Es de sólo lectura.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SmartArtNode.Delete" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Delete ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Delete();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(3)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quita el nodo SmartArt actual.</summary>
+        <remarks>
+          <para>Cuando se elimina el nodo, el primer elemento secundario obtiene promocionado. En el siguiente modelo de datos:</para>
+          <list type="bullet">
+            <item>
+              <para>A</para>
+            </item>
+            <item>
+              <para>d.</para>
+            </item>
+          </list>
+          <para>Si se elimina B, el modelo de datos, a continuación, el mismo aspecto que lo siguiente:</para>
+          <list type="bullet">
+            <item>
+              <para>A</para>
+            </item>
+            <item>
+              <para>d.</para>
+            </item>
+          </list>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Demote">
+      <MemberSignature Language="C#" Value="public void Demote ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Demote() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SmartArtNode.Demote" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Demote ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Demote();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(5)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Disminuye el nodo actual un único nivel dentro del modelo de datos.</summary>
+        <remarks>
+          <para>Esta funcionalidad imite el botón Disminuir nivel en la IU de la cinta de opciones de Microsoft Office Fluent cuando se trabaja en el panel de contenido. Por ejemplo, dado el modelo de datos siguientes:</para>
+          <list type="bullet">
+            <item>
+              <para>A</para>
+            </item>
+            <item>
+              <para>B</para>
+            </item>
+            <item>
+              <para>d.</para>
+            </item>
+          </list>
+          <para>Si se degrada B, el modelo de datos resultante será parecido a lo siguiente:</para>
+          <list type="bullet">
+            <item>
+              <para>A</para>
+            </item>
+            <item>
+              <para>d.</para>
+            </item>
+          </list>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hidden">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.MsoTriState Hidden { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Core.MsoTriState Hidden" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SmartArtNode.Hidden" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Hidden As MsoTriState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoTriState Hidden { Microsoft::Office::Core::MsoTriState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(12)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(12)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve <b>true</b> si este nodo es un nodo oculto en el modelo de datos.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Es de sólo lectura.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Larger">
+      <MemberSignature Language="C#" Value="public void Larger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Larger() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SmartArtNode.Larger" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Larger ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Larger();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(9)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aumenta el tamaño de la SmartArt. Imita el comportamiento del botón Grande de la ficha Formato de cinta de Microsoft Office Fluent para SmartArt.</summary>
+        <remarks>
+          <para>La cantidad real del aumento depende del diseño de los nodos.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public int Level { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Level" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SmartArtNode.Level" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Level As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Level { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(11)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(11)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el nivel del nodo de la jerarquía.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Los niveles de iniciarse en 1 e incrementan hacia arriba. Si un nodo no tiene ningún nivel, se devuelve 0. Por ejemplo, en el siguiente modelo de datos, A y F tienen un nivel de 1, B y D tienen un nivel de 2 y C y E tienen un nivel de 3.</para>
+          <list type="bullet">
+            <item>
+              <para>A</para>
+            </item>la
+            <item><para>F</para></item></list>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Nodes">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.SmartArtNodes Nodes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Core.SmartArtNodes Nodes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SmartArtNode.Nodes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Nodes As SmartArtNodes" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::SmartArtNodes ^ Nodes { Microsoft::Office::Core::SmartArtNodes ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(13)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(13)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.SmartArtNodes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve los nodos secundarios asociados a este nodo SmartArt.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Es de sólo lectura.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrgChartLayout">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.MsoOrgChartLayoutType OrgChartLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Core.MsoOrgChartLayoutType OrgChartLayout" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SmartArtNode.OrgChartLayout" />
+      <MemberSignature Language="VB.NET" Value="Public Property OrgChartLayout As MsoOrgChartLayoutType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoOrgChartLayoutType OrgChartLayout { Microsoft::Office::Core::MsoOrgChartLayoutType get(); void set(Microsoft::Office::Core::MsoOrgChartLayoutType value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(6)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(6)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(6)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.MsoOrgChartLayoutType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve o establece la <see cref="T:Microsoft.Office.Core.MsoOrgChartLayoutType" /> asociado a este nodo, si hay alguno.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Los posibles miembros son:</para>
+          <list type="bullet">
+            <item>
+              <para>msoOrgChartLayoutBothHanging</para>
+            </item>
+            <item>
+              <para>msoOrgChartLayoutDefault </para>
+            </item>
+            <item>
+              <para>msoOrgChartLayoutLeftHanging </para>
+            </item>
+            <item>
+              <para>msoOrgChartLayoutMixed </para>
+            </item>
+            <item>
+              <para>msoOrgChartLayoutRightHanging </para>
+            </item>
+            <item>
+              <para>msoOrgChartLayoutStandard</para>
+            </item>
+          </list>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SmartArtNode.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtiene el objeto de llamada.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentNode">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.SmartArtNode ParentNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Core.SmartArtNode ParentNode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SmartArtNode.ParentNode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParentNode As SmartArtNode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::SmartArtNode ^ ParentNode { Microsoft::Office::Core::SmartArtNode ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(14)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(14)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.SmartArtNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve al elemento primario <b>SmartArtNode</b> de este <b>SmartArtNode</b>.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Es de sólo lectura. Si este nodo es el nodo raíz, se devuelve un error.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Promote">
+      <MemberSignature Language="C#" Value="public void Promote ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Promote() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SmartArtNode.Promote" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Promote ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Promote();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(4)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Promueve el nodo actual (y todos sus elementos secundarios) un único nivel dentro del modelo de datos.</summary>
+        <remarks>
+          <para>Esta funcionalidad imite el botón Promover en la IU de la cinta de opciones de Microsoft Office Fluent cuando se trabaja en el panel de contenido. Por ejemplo, dado el modelo de datos siguientes:</para>
+          <list type="bullet">
+            <item>
+              <para>A</para>
+            </item>
+            <item>
+              <para>d.</para>
+            </item>
+          </list>
+          <para>Si se promueve B, el modelo de datos resultante el siguiente aspecto:</para>
+          <list type="bullet">
+            <item>
+              <para>A</para>
+            </item>
+            <item>
+              <para>B</para>
+            </item>
+            <item>
+              <para>d.</para>
+            </item>
+          </list>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReorderDown">
+      <MemberSignature Language="C#" Value="public void ReorderDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReorderDown() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SmartArtNode.ReorderDown" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ReorderDown ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ReorderDown();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(17)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Intercambia un nodo con el nodo siguiente en la lista con viñetas. Este método vuelve a ordenar familia completo del nodo.</summary>
+        <remarks>
+          <para>Este método simula haciendo clic en los botones Reordenar hacia abajo en la interfaz de usuario de Microsoft Office Fluent Ribbon que se encuentra en la ficha Herramientas de SmartArt, en el grupo Diseño en Reordenar hacia abajo.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReorderUp">
+      <MemberSignature Language="C#" Value="public void ReorderUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReorderUp() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SmartArtNode.ReorderUp" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ReorderUp ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ReorderUp();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(16)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Intercambia un nodo con el nodo anterior en la lista con viñetas. Este método vuelve a ordenar familia completo del nodo.</summary>
+        <remarks>
+          <para>Este método simula haciendo clic en el botón Cambiar el orden de copia de seguridad en la interfaz de usuario de Microsoft Office Fluent Ribbon que se encuentra en la ficha Herramientas de SmartArt, en el grupo Diseño en cambiar el orden de copia de seguridad.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shapes">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.ShapeRange Shapes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Core.ShapeRange Shapes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SmartArtNode.Shapes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Shapes As ShapeRange" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::ShapeRange ^ Shapes { Microsoft::Office::Core::ShapeRange ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(7)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(7)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.ShapeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el intervalo de formas asociado a este objeto <b>SmartArtNode</b>.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Para encontrar el intervalo, utilice el <see cref="P:Microsoft.Office.Core.Shapes.Count" /> (propiedad).</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Smaller">
+      <MemberSignature Language="C#" Value="public void Smaller ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Smaller() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SmartArtNode.Smaller" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Smaller ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Smaller();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(10)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Disminuye el tamaño de SmartArt. Imita el comportamiento del botón Smaller en la ficha Formato de la interfaz de usuario de cinta Microsoft Office Fluent para SmartArt.</summary>
+        <remarks>
+          <para>La cantidad de disminución depende del tamaño del diseño del nodo.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextFrame2">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.TextFrame2 TextFrame2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Core.TextFrame2 TextFrame2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SmartArtNode.TextFrame2" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TextFrame2 As TextFrame2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::TextFrame2 ^ TextFrame2 { Microsoft::Office::Core::TextFrame2 ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(8)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.TextFrame2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el texto asociado con el objeto <b>SmartArtNode</b>.</summary>
+        <value>Devuelve un <see cref="T:Microsoft.Office.Core.TextFrame2" />.</value>
+        <remarks>
+          <para>Es de sólo lectura.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.MsoSmartArtNodeType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Core.MsoSmartArtNodeType Type" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SmartArtNode.Type" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As MsoSmartArtNodeType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoSmartArtNodeType Type { Microsoft::Office::Core::MsoSmartArtNodeType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(15)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(15)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.MsoSmartArtNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el tipo de nodo SmartArt.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Es de sólo lectura. Los valores posibles son <see cref="F:Microsoft.Office.Core.MsoSmartArtNodeType.msoSmartArtNodeTypeAssistant" /> o <see cref="F:Microsoft.Office.Core.MsoSmartArtNodeType.msoSmartArtNodeTypeDefault" />.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

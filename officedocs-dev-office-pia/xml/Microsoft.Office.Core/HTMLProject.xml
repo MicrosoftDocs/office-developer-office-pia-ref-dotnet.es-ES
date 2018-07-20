@@ -1,0 +1,280 @@
+<Type Name="HTMLProject" FullName="Microsoft.Office.Core.HTMLProject">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="ec7d666e324390126ac21b47a76f888f91244674" />
+    <Meta Name="ms.sourcegitcommit" Value="f41bc3cdd2c00b9a51a4340ac823a9e309633924" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="es-ES" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20663175" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface HTMLProject : Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract HTMLProject implements class Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Core.HTMLProject" />
+  <TypeSignature Language="VB.NET" Value="Public Interface HTMLProject&#xA;Implements _IMsoDispObj" />
+  <TypeSignature Language="C++ CLI" Value="public interface class HTMLProject : Microsoft::Office::Core::_IMsoDispObj" />
+  <AssemblyInfo>
+    <AssemblyName>office</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Core._IMsoDispObj</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("000C0356-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4304)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa una rama de proyecto de nivel superior, como se muestra en el Explorador de proyectos en el Editor de secuencias de comandos de Microsoft.</summary>
+    <remarks>
+      <para>Usar el <see cref="M:Microsoft.Office.Core.HTMLProject.Open(Microsoft.Office.Core.MsoHTMLProjectOpen)" /> (método) de la <see cref="T:Microsoft.Office.Core.HTMLProject" /> objeto para abrir un proyecto HTML en el Editor de secuencias de comandos de Microsoft. El proyecto se abre en la vista de origen o la vista de texto para el documento activo de Microsoft Word, un libro de Excel o una presentación de PowerPoint.</para> Uso de 
+      <para>el <see cref="T:Microsoft.Office.Core.HTMLProjectItems" /> (propiedad) para devolver la colección de objetos <b>HTMLProjectItem</b> del proyecto HTML. Usar el <see cref="M:Microsoft.Office.Core.HTMLProject.RefreshDocument(System.Boolean)" /> método para actualizar el documento HTML en la aplicación host. Usar el <see cref="M:Microsoft.Office.Core.HTMLProject.RefreshProject(System.Boolean)" /> método para actualizar el proyecto en el Editor de secuencias de comandos de Microsoft. Usar el <see cref="P:Microsoft.Office.Core.HTMLProject.State" /> método para determinar si es necesario actualizar el proyecto HTML.</para><para /></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public object Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.HTMLProject.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Application { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Application</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un objeto <b>Application</b> que representa la aplicación contenedora para el objeto.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.HTMLProject.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Creator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un entero de 32 bits que indica la aplicación en la que se creó el objeto especificado.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Si el objeto se creó en Microsoft Word, esta propiedad devuelve 1297307460, que representa la cadena MSWD; Si se creó en Microsoft Excel, esta propiedad devuelve 1480803660. Este valor también puede representarse mediante la constante <b>wdCreatorCode</b> en Word o <b>xlCreatorCode</b> en Excel.</para> Propiedad 
+          <para>el <b>creador</b> principalmente se diseñó para usarse en Macintosh, donde cada aplicación tiene un código de creador de cuatro caracteres. Por ejemplo, Microsoft Word tiene el código de creador MSWD. Para obtener información adicional acerca de esta propiedad, vea la referencia del lenguaje ayuda que se incluye con Microsoft Office Macintosh Edition.</para><para>El <b>creador</b> de la propiedad devuelve siempre el identificador numérico de la aplicación activa, al igual que el <see cref="P:Microsoft.Office.Core.HTMLProject.Application" /> propiedad siempre devuelve el nombre de la aplicación activa en forma de cadena. Utilice la propiedad <b>CreatedBy</b> de la <see cref="T:Microsoft.Office.Core.SharedWorkspaceFile" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceFolder" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceLink" />, y <see cref="T:Microsoft.Office.Core.SharedWorkspaceTask" /> objetos para devolver el nombre de la persona que creó dichos objetos. Utilice las propiedades de documento para devolver información acerca de los autores de los documentos de Office.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HTMLProjectItems">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.HTMLProjectItems HTMLProjectItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Core.HTMLProjectItems HTMLProjectItems" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.HTMLProject.HTMLProjectItems" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HTMLProjectItems As HTMLProjectItems" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::HTMLProjectItems ^ HTMLProjectItems { Microsoft::Office::Core::HTMLProjectItems ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(3)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(3)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.HTMLProjectItems</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el <see cref="T:Microsoft.Office.Core.HTMLProjectItems" /> colección que se incluye en el proyecto HTML especificado.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public void Open (Microsoft.Office.Core.MsoHTMLProjectOpen OpenKind = (Microsoft.Office.Core.MsoHTMLProjectOpen) 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Open([in]valuetype Microsoft.Office.Core.MsoHTMLProjectOpen OpenKind) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.HTMLProject.Open(Microsoft.Office.Core.MsoHTMLProjectOpen)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Open (Optional OpenKind As MsoHTMLProjectOpen = (Microsoft.Office.Core.MsoHTMLProjectOpen) 0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(5)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="OpenKind" Type="Microsoft.Office.Core.MsoHTMLProjectOpen" />
+      </Parameters>
+      <Docs>
+        <param name="OpenKind">Opcional <see cref="T:Microsoft.Office.Core.MsoHTMLProjectOpen" />. La vista en la que se abre el proyecto especificado o el elemento de proyecto.</param>
+        <summary>Abre el proyecto HTML especificado o el elemento del proyecto HTML en Microsoft Script Editor en una de las vistas especificadas por el opcional <see cref="T:Microsoft.Office.Core.MsoHTMLProjectOpen" /> constantes.</summary>
+        <remarks>
+          <para>Si no se especifica una de las constantes, el elemento de proyecto se abre en la vista predeterminada.</para>
+          <para>La vista predeterminada depende de si el Editor de secuencias de comandos de Microsoft está abierto o no cuando se ejecuta el método <b>Open</b> . Si no está abierto el Editor de secuencias de comandos, el método <b>Open</b> se inicia el Editor de secuencias de comandos en la vista de origen. Si ya está abierto el Editor de secuencias de comandos, el método <b>Open</b> activará el Editor de secuencias de comandos y se muestra la secuencia de comandos en la vista actual.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.HTMLProject.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(4)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(4)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el objeto <b>primario</b> del objeto especificado.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshDocument">
+      <MemberSignature Language="C#" Value="public void RefreshDocument (bool Refresh = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RefreshDocument([in]bool Refresh) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.HTMLProject.RefreshDocument(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RefreshDocument (Optional Refresh As Boolean = false)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Refresh" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Refresh">
+          <b>Boolean</b> opcional.  <b>True</b> si todos los cambios se guardarán; <b>False</b> si todos los cambios que se pasen por alto.</param>
+        <summary>Actualiza el proyecto HTML especificado en la aplicación host de Microsoft Office.</summary>
+        <remarks>
+          <para>Uso de este método es equivalente a hacer clic en el botón Actualizar en la barra de herramientas de actualización en la aplicación host de Office. Si actualiza el documento estableciendo el método <b>RefreshDocument</b> en <b>True</b>, se guardan todos los cambios en el código fuente HTML realizados en el Editor de secuencias de comandos de Microsoft en la aplicación host de Office. Si establece <b>RefreshDocument</b> en <b>False</b>, se omiten todos los cambios en el código fuente HTML.</para> Tenga en cuenta que el valor devuelto por 
+          <para>el <see cref="P:Microsoft.Office.Core.HTMLProject.State" /> (propiedad) se ve afectada por el método <b>RefreshDocument</b> . Si se llama a RefreshDocument(True), la propiedad <b>State</b> devuelve <b>msoHTMLProjectStateDocumentProjectUnlocked</b> si se llama después de la operación de actualización.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshProject">
+      <MemberSignature Language="C#" Value="public void RefreshProject (bool Refresh = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RefreshProject([in]bool Refresh) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.HTMLProject.RefreshProject(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RefreshProject (Optional Refresh As Boolean = false)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Refresh" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Refresh">
+          <b>Boolean</b> opcional.  <b>True</b> si el documento se actualizará; <b>False</b> si el documento no se actualizará.</param>
+        <summary>Actualiza el proyecto HTML especificado en el Editor de secuencias de comandos de Microsoft.</summary>
+        <remarks>
+          <para>Uso de este método es equivalente a hacer clic en el botón Actualizar en la barra de herramientas de actualización en el Editor de secuencias de comandos de Microsoft. Si actualiza el documento estableciendo <see cref="M:Microsoft.Office.Core.HTMLProject.RefreshDocument(System.Boolean)" /> en <b>True</b>, se guardan todos los cambios en el código fuente HTML realizados en la aplicación host de Office en el proyecto HTML en el Editor de secuencias de comandos de Microsoft. Si establece <b>RefreshDocument</b> en <b>False</b>, se omiten todos los cambios en el código fuente HTML.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.MsoHTMLProjectState this { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Core.MsoHTMLProjectState State" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.HTMLProject.State" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property State As MsoHTMLProjectState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoHTMLProjectState default { Microsoft::Office::Core::MsoHTMLProjectState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.MsoHTMLProjectState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el estado actual de un <see cref="T:Microsoft.Office.Core.HTMLProject" /> objeto.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

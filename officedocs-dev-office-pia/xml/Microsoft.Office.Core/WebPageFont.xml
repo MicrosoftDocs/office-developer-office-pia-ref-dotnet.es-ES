@@ -1,0 +1,241 @@
+<Type Name="WebPageFont" FullName="Microsoft.Office.Core.WebPageFont">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="9986cfe6a568f6dc708c8c83727a0c222e2cc078" />
+    <Meta Name="ms.sourcegitcommit" Value="f41bc3cdd2c00b9a51a4340ac823a9e309633924" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="es-ES" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20662781" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface WebPageFont : Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract WebPageFont implements class Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Core.WebPageFont" />
+  <TypeSignature Language="VB.NET" Value="Public Interface WebPageFont&#xA;Implements _IMsoDispObj" />
+  <TypeSignature Language="C++ CLI" Value="public interface class WebPageFont : Microsoft::Office::Core::_IMsoDispObj" />
+  <AssemblyInfo>
+    <AssemblyName>office</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Core._IMsoDispObj</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("000C0913-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4288)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa la fuente predeterminada utilizada cuando los documentos se guardan como páginas Web en un juego de caracteres concreto.</summary>
+    <remarks>
+      <para>Utilice el objeto <b>WebPageFont</b> para describir la fuente proporcional, el tamaño de fuente proporcional, fuente de ancho fijo y tamaño de fuente de ancho fijo para cualquier juego de caracteres disponible.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public object Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.WebPageFont.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Application { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Application</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un objeto <b>Application</b> que representa la aplicación contenedora para el objeto.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.WebPageFont.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Creator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un entero de 32 bits que indica la aplicación en la que se creó el objeto especificado.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Si el objeto especificado se creó en Microsoft Word, esta propiedad devuelve 1297307460, que representa la cadena MSWD; Si se creó en Microsoft Excel, esta propiedad devuelve 1480803660. Este valor también puede representarse mediante la constante <b>wdCreatorCode</b> en Word o <b>xlCreatorCode</b> en Excel.</para> Propiedad 
+          <para>el <b>creador</b> principalmente se diseñó para usarse en Macintosh, donde cada aplicación tiene un código de creador de cuatro caracteres. Por ejemplo, Microsoft Word tiene el código de creador MSWD. Para obtener información adicional acerca de esta propiedad, vea la referencia del lenguaje ayuda que se incluye con Microsoft Office Macintosh Edition.</para><para>El <b>creador</b> de la propiedad devuelve siempre el identificador numérico de la aplicación activa, al igual que el <see cref="P:Microsoft.Office.Core.WebPageFont.Application" /> propiedad siempre devuelve el nombre de la aplicación activa en forma de cadena. Utilice la propiedad <b>CreatedBy</b> de la <see cref="T:Microsoft.Office.Core.SharedWorkspaceFile" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceFolder" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceLink" />, y <see cref="T:Microsoft.Office.Core.SharedWorkspaceTask" /> objetos para devolver el nombre de la persona que creó dichos objetos. Utilice las propiedades de documento para devolver información acerca de los autores de los documentos de Office.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedWidthFont">
+      <MemberSignature Language="C#" Value="public string FixedWidthFont { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FixedWidthFont" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.WebPageFont.FixedWidthFont" />
+      <MemberSignature Language="VB.NET" Value="Public Property FixedWidthFont As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FixedWidthFont { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(12)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(12)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(12)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve o establece la configuración de fuente de ancho fijo en la aplicación host.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Cuando se establece la propiedad <b>FixedWidthFont</b> , la aplicación host no comprueba si el valor es válido.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedWidthFontSize">
+      <MemberSignature Language="C#" Value="public float FixedWidthFontSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 FixedWidthFontSize" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.WebPageFont.FixedWidthFontSize" />
+      <MemberSignature Language="VB.NET" Value="Public Property FixedWidthFontSize As Single" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property float FixedWidthFontSize { float get(); void set(float value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(13)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(13)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(13)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve o establece la configuración de tamaño de fuente de ancho fijo en la aplicación host, en puntos.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Cuando se establece la propiedad <b>FixedWidthFontSize</b> , la aplicación host no comprueba si el valor es válido. Si escribe un valor no válido, como un número-comunes, la aplicación host establece el tamaño en 0 puntos. Puede escribir los tamaños de medio punto; Si especifica otros tamaños de punto fraccionario, se redondean hacia arriba o hacia abajo hasta el punto más cercano de la mitad.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProportionalFont">
+      <MemberSignature Language="C#" Value="public string ProportionalFont { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProportionalFont" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.WebPageFont.ProportionalFont" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProportionalFont As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ProportionalFont { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(10)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(10)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(10)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve o establece la configuración de fuente proporcional en la aplicación host.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Cuando se establece la propiedad <b>ProportionalFont</b> , la aplicación host no comprueba si el valor es válido.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProportionalFontSize">
+      <MemberSignature Language="C#" Value="public float ProportionalFontSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 ProportionalFontSize" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.WebPageFont.ProportionalFontSize" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProportionalFontSize As Single" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property float ProportionalFontSize { float get(); void set(float value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(11)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(11)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(11)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve o establece la configuración de tamaño de fuente proporcional en la aplicación host, en puntos.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Cuando se establece la propiedad <b>ProportionalFontSize</b> , la aplicación host no comprueba si el valor es válido. Si escribe un valor no válido, como un número-comunes, la aplicación host establece el tamaño en 0 puntos. Puede escribir los tamaños de medio punto; Si especifica otros tamaños de punto fraccionario, se redondean hacia arriba o hacia abajo hasta el punto más cercano de la mitad.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
