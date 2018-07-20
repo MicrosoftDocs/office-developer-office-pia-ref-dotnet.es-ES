@@ -1,0 +1,585 @@
+<Type Name="SharedWorkspace" FullName="Microsoft.Office.Core.SharedWorkspace">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="71a452a8173817374f9c4faa7efc94b837c407ff" />
+    <Meta Name="ms.sourcegitcommit" Value="f41bc3cdd2c00b9a51a4340ac823a9e309633924" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="es-ES" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20662800" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface SharedWorkspace : Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SharedWorkspace implements class Microsoft.Office.Core._IMsoDispObj" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Core.SharedWorkspace" />
+  <TypeSignature Language="VB.NET" Value="Public Interface SharedWorkspace&#xA;Implements _IMsoDispObj" />
+  <TypeSignature Language="C++ CLI" Value="public interface class SharedWorkspace : Microsoft::Office::Core::_IMsoDispObj" />
+  <AssemblyInfo>
+    <AssemblyName>office</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Core._IMsoDispObj</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("000C0385-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4288)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Este objeto, miembro o enumeración está desusada y no está pensada para usarse en el código. Un objeto <b>SharedWorkspace</b> permite al programador agregar el documento activo a un área de documentos de Microsoft Windows SharePoint Services en el servidor y administrar otros objetos en el área de trabajo compartida.</summary>
+    <remarks>
+      <para>La propiedad <b>SharedWorkspace</b> de un objeto de <b>documento</b> de Microsoft Office Word 2003, el objeto <b>libro</b> de Microsoft Office Excel 2003 y el objeto de Microsoft Office PowerPoint 2003 <b>presentación</b> devuelve un <b>SharedWorkspace</b> objeto.</para> Objeto 
+      <para>uso <b>SharedWorkspace</b> para agregar el documento activo de Word, Excel o PowerPoint a un área de documentos de Windows SharePoint Services en el servidor para aprovechar las características de colaboración del área de trabajo, o para desconectar o quitar el documento del área de trabajo. Utilice las colecciones del objeto <b>SharedWorkspace</b> para administrar archivos, carpetas, vínculos, miembros y tareas asociadas con el documento compartido.</para><para>El modelo de objetos <b>SharedWorkspace</b> está disponible o no está almacenado un documento en un área de trabajo. La propiedad <b>SharedWorkspace</b> de los objetos <b>Document</b>, <b>Workbook</b>y <b>Presentation</b> no devuelve Nothing cuando el documento no se comparte. Usar el <see cref="P:Microsoft.Office.Core.SharedWorkspace.Connected" /> (propiedad) del objeto <b>SharedWorkspace</b> para determinar si el documento activo se guarda en y conectado a un área de trabajo compartida de hecho.</para><para>Los usuarios requieren permisos adecuados para utilizar los objetos, propiedades y métodos en la jerarquía de objetos <b>SharedWorkspace</b> .</para><para>Usar la <see cref="T:Microsoft.Office.Core.SharedWorkspaceFiles" /> colección, tener acceso a través del <see cref="P:Microsoft.Office.Core.SharedWorkspace.Files" /> (propiedad) del objeto <b>SharedWorkspace</b> , para administrar los documentos y los archivos guardados en un área de trabajo compartida.</para><para>Usar la <see cref="T:Microsoft.Office.Core.SharedWorkspaceFolders" /> colección, tener acceso a través del <see cref="P:Microsoft.Office.Core.SharedWorkspace.Folders" /> (propiedad) del objeto <b>SharedWorkspace</b> , para administrar subcarpetas dentro de la carpeta de biblioteca de documentos principal de un área de trabajo compartida.</para><para>Usar la <see cref="T:Microsoft.Office.Core.SharedWorkspaceLinks" /> colección, tener acceso a través del <see cref="P:Microsoft.Office.Core.SharedWorkspace.Links" /> (propiedad) del objeto <b>SharedWorkspace</b> , para administrar vínculos a otros documentos o información de interés para los integrantes que colaboran en los documentos en el compartido área de trabajo.</para><para>Usar la <see cref="T:Microsoft.Office.Core.SharedWorkspaceMembers" /> colección, tener acceso a través del <see cref="P:Microsoft.Office.Core.SharedWorkspace.Members" /> propiedad del objeto <b>SharedWorkspace</b> , para administrar los usuarios que tienen derechos para participar en un área de trabajo compartida y colaborar en los documentos compartidos guardados en el área de trabajo.</para><para>Usar la <see cref="T:Microsoft.Office.Core.SharedWorkspaceTasks" /> colección, tener acceso a través del <see cref="P:Microsoft.Office.Core.SharedWorkspace.Tasks" /> (propiedad) del objeto <b>SharedWorkspace</b> , para administrar las tareas asignadas a los integrantes que colaboran en los documentos en el área de trabajo compartida.</para> Uso de 
+      <para>la <see cref="M:Microsoft.Office.Core.SharedWorkspace.CreateNew(System.Object,System.Object)" /> método para crear una nueva área de documentos y para agregar el documento activo al área de trabajo. Usar el <see cref="P:Microsoft.Office.Core.SharedWorkspace.Name" /> y <see cref="P:Microsoft.Office.Core.SharedWorkspace.URL" /> propiedades para devolver información sobre el área de trabajo.</para> Objeto 
+      <para><b>SharedWorkspace</b> utiliza una memoria caché local de objetos y propiedades del servidor. El programador necesite actualizar esta caché antes de realizar determinadas operaciones o para guardar los cambios de propiedad almacenados en caché en el servidor. Usar el <see cref="M:Microsoft.Office.Core.SharedWorkspace.Refresh" /> método del objeto <b>SharedWorkspace</b> para actualizar la caché local desde el servidor y usar el <see cref="P:Microsoft.Office.Core.SharedWorkspace.LastRefreshed" /> (propiedad) para determinar cuándo tuvo lugar por última vez la operación de actualización. Utilice el método <b>Save</b> de la <see cref="T:Microsoft.Office.Core.SharedWorkspaceLink" /> y <see cref="T:Microsoft.Office.Core.SharedWorkspaceTask" /> objetos después de modificar sus propiedades localmente con el fin de cargar los cambios en el servidor.</para> Uso de 
+      <para>la <see cref="M:Microsoft.Office.Core.SharedWorkspace.Disconnect" /> método para desconectar la copia local del documento activo desde el área de trabajo compartida, dejando intacta la copia compartida en el área de trabajo. Usar el <see cref="M:Microsoft.Office.Core.SharedWorkspace.RemoveDocument" /> método para quitar completamente el documento compartido del área de trabajo compartida.</para> Los usuarios de 
+      <para>requerir permisos adecuados para utilizar los objetos, propiedades y métodos en la jerarquía de objetos <b>SharedWorkspace</b> . Usar el <paramref name="Role" /> argumento al agregar miembros a la <see cref="T:Microsoft.Office.Core.SharedWorkspaceMembers" /> colección para especificar el conjunto de permisos específicos de cada miembro del área de trabajo.</para><para>Cuando se usa el modelo de objetos <b>SharedWorkspace</b> , es posible crear condiciones en las que la caché del objeto <b>SharedWorkspace</b> no esté sincronizada con la interfaz de usuario que se muestra en el panel de área de trabajo compartida del documento activo. Por ejemplo, si el método <b>CreateNew</b> agrega mediante programación el documento activo a un área de trabajo nueva mientras está abierto el panel de área de trabajo compartida, el panel de área de trabajo compartida seguirá mostrando el botón Crear. En estos casos, si el usuario realiza una selección en el panel de área de trabajo compartida que ya no es válido, se produce un error y se lleva a cabo una operación de actualización para sincronizar la presentación con los datos de área de trabajo compartida y el estado actual del documento.</para><para>El <see cref="T:Microsoft.Office.Interop.Word.Document" />, <see cref="T:Microsoft.Office.Interop.Excel.Workbook" />, y objetos de <b>presentación</b> también tienen una propiedad <b>Sync</b> que devuelve un <see cref="T:Microsoft.Office.Core.Sync" /> objeto. Utilice el objeto <b>Sync</b> y sus propiedades y métodos para administrar la sincronización de la variable local y la copia del servidor del documento compartido.</para><para /></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public object Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspace.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Application { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Application</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743808)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un objeto <b>Application</b> que representa la aplicación contenedora para el objeto.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connected">
+      <MemberSignature Language="C#" Value="public bool Connected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Connected" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspace.Connected" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Connected As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Connected { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(11)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(11)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un valor <b>booleano</b> que indica si el documento activo es actualmente guardado en y conectado a un área de trabajo compartida.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Usar el <see cref="M:Microsoft.Office.Core.SharedWorkspace.Disconnect" /> (método) de la <see cref="T:Microsoft.Office.Core.SharedWorkspace" /> objeto para desconectar la copia local del documento activo desde el área de trabajo compartida. Usar el <see cref="M:Microsoft.Office.Core.SharedWorkspace.RemoveDocument" /> método para quitar el documento desde el área de trabajo compartida.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNew">
+      <MemberSignature Language="C#" Value="public void CreateNew (object URL, object Name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateNew([in]object URL, [in]object Name) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SharedWorkspace.CreateNew(System.Object,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CreateNew (Optional URL As Object, Optional Name As Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(7)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="URL" Type="System.Object" />
+        <Parameter Name="Name" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="URL">
+          <b>String</b> opcional.  Dirección URL de la carpeta principal en la que se va a crear la nueva área de trabajo compartida. Si no se proporciona una dirección URL, la nueva área de trabajo compartida se crea en la ubicación predeterminada del servidor del usuario.</param>
+        <param name="Name">
+          <b>String</b> opcional.  El nombre de la nueva área de trabajo compartida. El valor predeterminado es el nombre del documento activo sin la extensión de archivo. Por ejemplo, si se crea un área de trabajo compartida para presupuesto.xls, el nombre de la nueva área de trabajo compartida se convierte en "Presupuesto".</param>
+        <summary>Crea una nueva área de documentos en el servidor y agrega el documento activo a la nueva área de trabajo compartida.</summary>
+        <remarks>
+          <para>Utilice el método <b>CreateNew</b> para crear una nueva área de trabajo compartida para el documento activo. Omita los argumentos opcionales 2 para crear el área de trabajo con el nombre del documento activo en la ubicación predeterminada del servidor del usuario.</para> Método 
+          <para>el <b>CreateNew</b> genera un error si el documento activo tiene cambios que no se han guardado. El documento debe guardarse antes de se puede agregar a un área de trabajo compartida.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspace.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Office.Core._IMsoDispObj.Creator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1610743809)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un entero de 32 bits que indica la aplicación en la que se creó el objeto especificado.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Si el objeto especificado se creó en Microsoft Word, esta propiedad devuelve 1297307460, que representa la cadena MSWD; Si se creó en Microsoft Excel, esta propiedad devuelve 1480803660. Este valor también puede representarse mediante la constante <b>wdCreatorCode</b> en Word o <b>xlCreatorCode</b> en Excel.</para> Propiedad 
+          <para>el <b>creador</b> principalmente se diseñó para usarse en Macintosh, donde cada aplicación tiene un código de creador de cuatro caracteres. Por ejemplo, Microsoft Word tiene el código de creador MSWD. Para obtener información adicional acerca de esta propiedad, vea la referencia del lenguaje ayuda que se incluye con Microsoft Office Macintosh Edition.</para><para>El <b>creador</b> de la propiedad devuelve siempre el identificador numérico de la aplicación activa, al igual que el <see cref="P:Microsoft.Office.Core.SharedWorkspace.Application" /> propiedad siempre devuelve el nombre de la aplicación activa en forma de cadena. Utilice la propiedad <b>CreatedBy</b> de la <see cref="T:Microsoft.Office.Core.SharedWorkspaceFile" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceFolder" />, <see cref="T:Microsoft.Office.Core.SharedWorkspaceLink" />, y <see cref="T:Microsoft.Office.Core.SharedWorkspaceTask" /> objetos para devolver el nombre de la persona que creó dichos objetos. Utilice las propiedades de documento para devolver información acerca de los autores de los documentos de Office.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SharedWorkspace.Delete" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Delete ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Delete();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(8)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Elimina el área de trabajo compartida actual y todos los datos que contenga.</summary>
+        <remarks>
+          <para>El método <b>Delete</b> se producirá un error si el usuario no tiene permiso para eliminar el área de trabajo compartida actual.</para>
+          <para>Si el documento activo se ha abierto directamente desde el área de trabajo, después de eliminar el área de trabajo del documento ya no se va a guardar en el disco. El programador debe recordar guardar el documento en una nueva ubicación antes de cerrarla, o el documento dejará de existir.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Disconnect">
+      <MemberSignature Language="C#" Value="public void Disconnect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Disconnect() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SharedWorkspace.Disconnect" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Disconnect ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Disconnect();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(15)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desconecta la copia local del documento activo desde el área de trabajo compartida.</summary>
+        <remarks>
+          <para>Utilice el método <b>Disconnect</b> para desasociar la copia local del documento activo desde el área de trabajo compartida. Este método conserva el documento compartido en el servidor; Sin embargo, la copia local ya no se sincronizará con la copia compartida y ya no se beneficiará de las otras características de colaboración del área de trabajo compartida. Usar el <see cref="M:Microsoft.Office.Core.SharedWorkspace.RemoveDocument" /> método para quitar el documento compartido del servidor.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Files">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.SharedWorkspaceFiles Files { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Core.SharedWorkspaceFiles Files" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspace.Files" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Files As SharedWorkspaceFiles" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::SharedWorkspaceFiles ^ Files { Microsoft::Office::Core::SharedWorkspaceFiles ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(3)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(3)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.SharedWorkspaceFiles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un <see cref="T:Microsoft.Office.Core.SharedWorkspaceFiles" /> colección que representa la lista de archivos almacenados en la biblioteca de documentos asociada con el área de trabajo compartida actual.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Folders">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.SharedWorkspaceFolders Folders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Core.SharedWorkspaceFolders Folders" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspace.Folders" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Folders As SharedWorkspaceFolders" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::SharedWorkspaceFolders ^ Folders { Microsoft::Office::Core::SharedWorkspaceFolders ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(4)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(4)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.SharedWorkspaceFolders</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un <see cref="T:Microsoft.Office.Core.SharedWorkspaceFolders" /> colección que representa la lista de subcarpetas de la biblioteca de documentos asociada con el área de trabajo compartida actual.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>La colección <b>SharedWorkspaceFolders</b> no incluye la carpeta raíz de la biblioteca de documentos que, de forma predeterminada, se denomina "Documentos compartidos".</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastRefreshed">
+      <MemberSignature Language="C#" Value="public object LastRefreshed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object LastRefreshed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspace.LastRefreshed" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LastRefreshed As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ LastRefreshed { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(12)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(12)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve la fecha y la hora del <see cref="M:Microsoft.Office.Core.SharedWorkspace.Refresh" /> recientemente se ha llamado al método.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>La propiedad <b>LastRefreshed</b> genera un error si se ha llamado nunca al método <b>Refresh</b> .</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Links">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.SharedWorkspaceLinks Links { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Core.SharedWorkspaceLinks Links" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspace.Links" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Links As SharedWorkspaceLinks" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::SharedWorkspaceLinks ^ Links { Microsoft::Office::Core::SharedWorkspaceLinks ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(5)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(5)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.SharedWorkspaceLinks</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un <see cref="T:Microsoft.Office.Core.SharedWorkspaceLinks" /> colección que representa la lista de los vínculos guardados en el área de trabajo compartida actual.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Members">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.SharedWorkspaceMembers Members { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Core.SharedWorkspaceMembers Members" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspace.Members" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Members As SharedWorkspaceMembers" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::SharedWorkspaceMembers ^ Members { Microsoft::Office::Core::SharedWorkspaceMembers ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.SharedWorkspaceMembers</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un <see cref="T:Microsoft.Office.Core.SharedWorkspaceMembers" /> colección que representa la lista de miembros en el área de trabajo compartida actual.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string this { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspace.Name" />
+      <MemberSignature Language="VB.NET" Value="Default Public Property Name As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve o establece el nombre del objeto especificado.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspace.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(9)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(9)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el objeto <b>primario</b> del objeto especificado.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Refresh() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SharedWorkspace.Refresh" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Refresh ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Refresh();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(6)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Actualiza la memoria caché local de la <see cref="T:Microsoft.Office.Core.SharedWorkspace" /> del objeto archivos, carpetas, vínculos, miembros y tareas desde el servidor.</summary>
+        <remarks>
+          <para>Utilice el método <b>Refresh</b> para asegurarse de que está trabajando con la lista más actualizada de los objetos y sus propiedades desde el área de trabajo compartida.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDocument">
+      <MemberSignature Language="C#" Value="public void RemoveDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveDocument() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Core.SharedWorkspace.RemoveDocument" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveDocument ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RemoveDocument();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(14)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quita el área de trabajo compartida del documento activo.</summary>
+        <remarks>
+          <para>Si el usuario no tiene permiso para quitar el documento del área de trabajo compartida del servidor, a continuación, permanece intacta la copia del servidor, pero se desconecta la copia local del documento desde el área de trabajo compartida. En el caso de que el documento una vez abierto directamente desde el área de trabajo y, a continuación, se quita del área de trabajo mediante <b>RemoveDocument</b>, el documento se debe guardar en otra ubicación antes de cerrarlo; en caso contrario, permanecerá en el área de trabajo.</para>
+          <para>Usar la <see cref="M:Microsoft.Office.Core.SharedWorkspace.Disconnect" /> método para desasociar la copia local del documento desde el área de trabajo compartida sin quitar la copia compartida.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceURL">
+      <MemberSignature Language="C#" Value="public string SourceURL { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceURL" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspace.SourceURL" />
+      <MemberSignature Language="VB.NET" Value="Public Property SourceURL As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SourceURL { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(13)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(13)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(13)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Designa la ubicación de la copia pública de un documento compartido al que se deben publicar los cambios después de que se ha revisado el documento en un área de documentos independiente.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>La interfaz de usuario de Microsoft Windows SharePoint Services permite a los usuarios copiar un documento compartido público desde una biblioteca de documentos en un área de documentos independiente para colaborar de forma temporal y, a continuación, publicar los cambios en la ubicación de origen original. La propiedad <b>SourceURL</b> indica la ubicación original de una copia del documento almacenada en un área de trabajo temporal.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tasks">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Core.SharedWorkspaceTasks Tasks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Core.SharedWorkspaceTasks Tasks" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspace.Tasks" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Tasks As SharedWorkspaceTasks" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::SharedWorkspaceTasks ^ Tasks { Microsoft::Office::Core::SharedWorkspaceTasks ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Core.SharedWorkspaceTasks</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve un <see cref="T:Microsoft.Office.Core.SharedWorkspaceTasks" /><b />colección que representa la lista de tareas en el área de trabajo compartida actual.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="URL">
+      <MemberSignature Language="C#" Value="public string URL { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string URL" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Core.SharedWorkspace.URL" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property URL As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ URL { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>office</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(10)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(10)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Devuelve el nivel superior dirección (URL) del área de trabajo compartida.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>La propiedad <b>URL</b> devuelve la dirección del área de trabajo compartida con este formato: http://server/sites/user/workspace/.</para>
+          <para>La propiedad <b>URL</b> devuelve una cadena con codificación URL. Por ejemplo, un espacio en el nombre de la carpeta se representa mediante % 20.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
