@@ -39,6 +39,7 @@
       ]
     },
     "globalMetadata": {
+      "apiPlatform": "dotnet",
       "breadcrumb_path": "~/breadcrumb/toc.yml",
       "ROBOTS": "INDEX,FOLLOW",
       "author": "o365devx",
@@ -49,9 +50,7 @@
       "audience": "developer",
       "ms.suite": "office",
       "ms.prod": "office365",
-      "products": [
-        "https://authoring-docs-microsoft.poolparty.biz/devrel/6ab06385-661e-4214-8870-bbe4071c960d"
-      ],
+      "products": ["https://authoring-docs-microsoft.poolparty.biz/devrel/6ab06385-661e-4214-8870-bbe4071c960d"],
       "ms.technology": "sdk",
       "ms.tgt_pltfrm": "dotnet",
       "apiPlatform": "dotnet"

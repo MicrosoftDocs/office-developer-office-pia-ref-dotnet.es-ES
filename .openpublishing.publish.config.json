@@ -4,7 +4,7 @@
       "docset_name": "officedocs-dev-office-pia",
       "build_source_folder": "officedocs-dev-office-pia",
       "build_output_subfolder": "officedocs-dev-office-pia",
-      "locale": "es-ES",
+      "locale": "es-es",
       "monikers": [
         "office-pia"
       ],
@@ -50,7 +50,7 @@
       ]
     }
   ],
-  "notification_subscribers": [],
+  "notification_subscribers": ["v-mipop@microsoft.com","v-jijaku@microsoft.com"],
   "branches_to_filter": [
     "live-sxs",
     "master-sxs"
@@ -62,7 +62,7 @@
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.es-ES",
+      "url": "https://github.com/Microsoft/templates.docs.msft.es-es",
       "branch": "master",
       "branch_mapping": {}
     },
